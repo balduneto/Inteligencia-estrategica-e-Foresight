@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defesa AIEF - Sistema FIEG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .slide-container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 2rem auto;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            background: #fff;
+            overflow: hidden;
+        }
+        .slide-content {
+            padding: 3rem 4rem;
+        }
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .slide-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.5rem;
+            margin-top: 3rem;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+        .fieg-logo-img {
+            height: 2.5rem; /* 40px */
+            width: auto;
+        }
+        .pill {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .pill-blue {
+            background-color: #ebf8ff;
+            color: #3182ce;
+        }
+        .pill-green {
+            background-color: #f0fff4;
+            color: #38a169;
+        }
+        .pill-gray {
+            background-color: #f7fafc;
+            color: #718096;
+        }
+        /* Estilos para "abas" interativas */
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .tab-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            background-color: #f1f5f9;
+            color: #475569;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .tab-btn.active, .tab-btn:hover {
+            background-color: #004a91;
+            color: #ffffff;
+        }
+        
+        /* Estilos do Simulador */
+        .sim-step {
+            display: none;
+        }
+        .sim-step.active {
+            display: block;
+        }
+        .sim-path {
+            display: none;
+        }
+        .sim-path.active {
+            display: block;
+        }
+        
+        /* Estilos Setores Portadores (Slide 5) */
+        .sector-card {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            height: 100%;
+        }
+        .sector-card:hover, .sector-card.active {
+            background-color: #fff;
+            border-color: #004a91;
+            box-shadow: 0 4px 10px rgba(0, 74, 145, 0.1);
+            transform: translateY(-2px);
+        }
+        #insight-display {
+            background-color: #004a91;
+            color: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="slide-container">
+        <!-- Slide 1: Capa (MODIFICADO) -->
+        <div class="slide-content bg-gray-100">
+            <header class="slide-header border-gray-300">
+                <!-- Logo inserida -->
+                <img src="https://i.postimg.cc/x1pYp13c/det-fieg.png" alt="Sistema FIEG Logo" class="fieg-logo-img">
+                <div class="text-right text-gray-700">
+                    <p class="font-semibold">Defesa Estratégica</p>
+                    <p class="text-sm opacity-80">Inteligência de Negócios & Foresight</p>
+                </div>
+            </header>
+            
+            <div class="py-16 text-center text-gray-800">
+                <h1 class="text-5xl font-black mb-4 text-gray-900">O Farol e a Ponte</h1>
+                <p class="text-2xl font-light opacity-90 max-w-3xl mx-auto text-gray-700">
+                    Proposta de criação da Assessoria de Inteligência Estratégica e Foresight (AIEF)
+                </p>
+                <p class="text-lg mt-6 opacity-80 text-gray-700">
+                    Conectando dados, gerando valor e desenhando o futuro da indústria em Goiás.
+                </p>
+            </div>
+
+            <footer class="slide-footer border-gray-300">
+                <div>Proposta para Presidência & Diretorias</div>
+                <div>Slide 1 de 10</div>
+            </footer>
+        </div>
+
+        <!-- Slide 2: O Cenário Atual (MODIFICADO) -->
+        <div class="slide-content">
+            <header class="slide-header">
+                <img src="https://i.postimg.cc/x1pYp13c/det-fieg.png" alt="Sistema FIEG Logo" class="fieg-logo-img">
+                <div class="pill pill-gray">Contexto</div>
+            </header>
+            
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Cenário Atual: Um Sistema de Excelência e Múltiplos Ativos</h2>
+            <p class="text-lg text-gray-700 mb-8">
+                Possuímos um portfólio vasto (FIEG, SESI, SENAI, IEL), áreas de execução robustas (GEREM, ASCOM) e o motor de dados (Observatório). Mais importante, temos os **300 maiores contribuintes** como parceiros-chave.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Ativos Atuais (O que TEMOS)</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><span class="font-semibold">GEREM & ASCOM:</span> Execução tática de vendas e comunicação.</li>
+                        <li><span class="font-semibold">Observatório da Indústria:</span> Fonte primária de dados macro (O Farol).</li>
+                        <li><span class="font-semibold">Top 300 Contribuintes:</span> Nossos "Key Accounts" que garantem a sustentabilidade do Sistema.</li>
+                        <li><span class="font-semibold">Portfólios Ricos (SESI/SENAI/IEL):</span> Dezenas de produtos e dados operacionais (vistos nos portfólios).</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="text-xl font-bold text-red-800 mb-3">O Gap Estratégico (O que FALTA)</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><span class="font-semibold">Visão Sistêmica Unificada:</span> Os dados dos "Top 300" estão em silos. Quem cruza os dados de SST (SESI) com os de P&D (SENAI) desse cliente?</li>
+                        <li><span class="font-semibold">Gestão de "Key Accounts" (KAM):</span> Falta uma inteligência proativa focada em *blindar e expandir* os Top 300.</li>
+                        <li><span class="font-semibold">Tradução de Tendências:</span> Como o dado do Observatório vira um *novo produto* integrado para um desses 300 clientes?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <footer class="slide-footer">
+                <div>Análise de Contexto</div>
+                <div>Slide 2 de 10</div>
+            </footer>
+        </div>
+
+        <!-- Slide 3: A Solução (AIEF) (MODIFICADO) -->
+        <div class="slide-content">
+            <header class="slide-header">
+                <img src="https://i.postimg.cc/x1pYp13c/det-fieg.png" alt="Sistema FIEG Logo" class="fieg-logo-img">
+                <div class="pill pill-blue">A Proposta</div>
+            </header>
+            
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">A Solução: Assessoria de Inteligência Estratégica e Foresight (AIEF)</h2>
+            <p class="text-lg text-gray-700 mb-8">
+                Uma assessoria leve, gerida pela FIEG, que atua como o "cérebro" analítico do Sistema. A AIEF fornece a inteligência que torna as entidades (SESI, SENAI, IEL) mais estratégicas, com foco total nos nossos principais parceiros.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- O Farol (Foresight) (ÍCONE NOVO) -->
+                <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 text-blue-600 mx-auto mb-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639l4.433-7.467a1.012 1.012 0 0 1 1.636 0l4.433 7.467a1.012 1.012 0 0 1 0 .639l-4.433 7.467a1.012 1.012 0 0 1-1.636 0l-4.433-7.467Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+                    <h3 class="text-2xl font-bold text-blue-800 mb-3">1. O FAROL (Foresight Estratégico)</h3>
+                    <p class="text-gray-700">
+                        Usar o <strong>Observatório da Indústria</strong> como um radar de longo alcance. Traduzir tendências em "mapas de oportunidade" para as entidades e Sindicatos.
+                    </p>
+                    <p class="font-semibold mt-3 text-blue-900">"O que vem por aí e como podemos ser pioneiros?"</p>
+                </div>
+                
+                <!-- A Ponte (Diagnóstico & Reset) (ÍCONE NOVO) -->
+                <div class="bg-green-50 p-6 rounded-lg border border-green-200 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 text-green-600 mx-auto mb-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0M3.75 18H7.5m3-6h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0M3.75 12H7.5" />
+                    </svg>
+                    <h3 class="text-2xl font-bold text-green-800 mb-3">2. A PONTE (Diagnóstico & Reset)</h3>
+                    <p class="text-gray-700">
+                        Usar a metodologia <strong>Reset-Go</strong> para fazer o diagnóstico profundo e desenhar soluções integradas, com *foco prioritário nos Top 300 contribuintes*.
+                    </p>
+                    <p class="font-semibold mt-3 text-green-900">"Quais são as dores estratégicas dos nossos Top 300 agora?"</p>
+                </div>
+            </div>
+
+            <footer class="slide-footer">
+                <div>Mandato da AIEF</div>
+                <div>Slide 3 de 10</div>
+            </footer>
+        </div>
+
+        <!-- Slide 4: O Elo - Como a AIEF se Encaixa (MODIFICADO) -->
+        <div class="slide-content">
+            <header class="slide-header">
+                <img src="https://i.postimg.cc/x1pYp13c/det-fieg.png" alt="Sistema FIEG Logo" class="fieg-logo-img">
+                <div class="pill pill-blue">Integração com Sindicatos</div>
+            </header>
+            
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">O Elo: Inteligência Focada para Ação Rápida</h2>
+            <p class="text-lg text-gray-700 mb-8">
+                A AIEF fornece o "O QUÊ" (a oportunidade) e o "PORQUÊ" (os dados), permitindo que Sindicatos e GEREM executem o "COMO" (a mobilização e a venda) com foco nos **Top 300**.
+            </p>
+
+            <!-- Diagrama de Fluxo MODIFICADO -->
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 text-center">
+                
+                <!-- Fonte de Dados -->
+                <div class="flex flex-col items-center">
+                    <div class="p-4 bg-gray-100 rounded-lg shadow-inner">
+                        <span class="font-semibold">FONTES DE DADOS</span>
+                        <ul class="text-sm text-gray-600 list-disc list-inside text-left mt-2">
+                            <li><strong>Observatório (FIEG)</strong></li>
+                            <li>CRMs (SESI/SENAI/IEL)</li>
+                            <li><strong>Lista Top 300 (FIEG)</strong></li>
+                            <li>Mercado (CNI, Sebrae)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-2xl font-bold text-blue-600 transform rotate-90 md:rotate-0">→</div>
+
+                <!-- AIEF -->
+                <div class="flex flex-col items-center">
+                    <div class="p-6 bg-blue-100 border-2 border-blue-500 rounded-lg shadow-lg">
+                        <span class="font-bold text-blue-800 text-lg">AIEF (Gestão DET FIEG)</span>
+                        <p class="text-sm text-blue-700 mt-2">Gera o "O Quê" e o "Porquê"</p>
+                        <ul class="text-sm text-blue-600 list-disc list-inside text-left mt-2">
+                            <li>Foresight (Observatório)</li>
+                            <li><strong>Diagnóstico (Reset-Go)</strong></li>
+                            <li><strong>Foco: Top 300 Contas</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-2xl font-bold text-blue-600 transform rotate-90 md:rotate-0">→</div>
+
+                <!-- Áreas de Execução -->
+                <div class="flex flex-col space-y-4">
+                    <div class="p-4 bg-green-100 rounded-lg shadow">
+                        <span class="font-semibold text-green-800">SINDICATOS SETORIAIS</span>
+                        <p class="text-sm text-green-700 mt-1">Mobilização Setorial (Key Accounts)</p>
+                    </div>
+                    <div class="p-4 bg-green-100 rounded-lg shadow">
+                        <span class="font-semibold text-green-800">GERÊNCIA DE MERCADO</span>
+                        <p class="text-sm text-green-700 mt-1">Execução de Vendas (B2B/B2C)</p>
+                    </div>
+                    <div class="p-4 bg-green-100 rounded-lg shadow">
+                        <span class="font-semibold text-green-800">ASSESSORIA DE COM.</span>
+                        <p class="text-sm text-green-700 mt-1">Execução da Narrativa (Branding)</p>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="slide-footer">
+                <div>Fluxo de Valor</div>
+                <div>Slide 4 de 10</div>
+            </footer>
+        </div>
+
+        <!-- Slide 5: Setores Portadores de Futuro (INTERATIVO) -->
+        <div class="slide-content">
+            <header class="slide-header">
+                <img src="https://i.postimg.cc/x1pYp13c/det-fieg.png" alt="Sistema FIEG Logo" class="fieg-logo-img">
+                <div class="pill pill-blue">O Farol (Foresight)</div>
+            </header>
+            
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Setores Portadores de Futuro em Goiás</h2>
+            <p class="text-lg text-gray-700 mb-8">
+                Clique em um setor para ver o "Sinal Fraco" (tendência), o Sindicato parceiro e o insight estratégico que a AIEF geraria para os **Top 300** daquele setor.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <button class="sector-card" id="btn-alimentos" onclick="showInsight(this, 'Alimentos & Bebidas', 'SINDALIMENT / SIAEG', 'A dor não é o \'Selo\' em si, mas a *barreira de acesso* a mercados premium (Europa/Ásia) e a fundos de investimento (ESG) que exigem rastreabilidade total.')">
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">Alimentos & Bebidas</h3>
+                    <p class="text-sm font-semibold text-gray-500 uppercase">VETOR: Food Tech & Rastreabilidade</p>
+                </button>
+                <button class="sector-card" id="btn-farma" onclick="showInsight(this, 'Farmacêutico & Saúde', 'SINDIFARGO', 'A próxima crise é a de *Saúde Mental*. A dor não é o \'burnout\' em si, mas o *custo do absenteísmo* e a dificuldade de reter talentos-chave (P&D, Gestão).')">
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">Farmacêutico & Saúde</h3>
+                    <p class="text-sm font-semibold text-gray-500 uppercase">VETOR: Saúde Preditiva & Bioeconomia</p>
+                </button>
+                <button class="sector-card" id="btn-construcao" onclick="showInsight(this, 'Construção Civil', 'SINDUSCON-GO', 'A dor não é o \'tijolo ecológico\', mas o *acesso ao financiamento* (BNDES/Caixa) que agora exige certificação \'Green Building\' e canteiros limpos.')">
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">Construção Civil</h3>
+                    <p class="text-sm font-semibold text-gray-500 uppercase">VETOR: Green Buildings & Construtech</p>
+                </button>
+                <button class="sector-card" id="btn-moda" onclick="showInsight(this, 'Vestuário & Moda', 'SINDIVEST', 'A dor não é o \'e-commerce\', mas o *\'Passaporte Digital de Produto\'* (Fashion Act da UE) que exige rastreabilidade ESG de toda a cadeia de fornecedores.')">
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">Vestuário & Moda</h3>
+                    <p class="text-sm font-semibold text-gray-500 uppercase">VETOR: ESG & Digital Fashion</p>
+                </button>
+                <button class="sector-card" id="btn-auto" onclick="showInsight(this, 'Automotivo (Cadeia)', 'SINDCAPEÇAS', 'A dor não é o \'carro elétrico\' (que não fazemos), mas a *adaptação de toda a cadeia* de autopeças (plásticos, metais, borrachas) para atender às novas demandas de montadoras (ex: baterias, leveza).')">
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">Automotivo (Cadeia)</h3>
+                    <p class="text-sm font-semibold text-gray-500 uppercase">VETOR: Eletrificação & Nearshoring</p>
+                </button>
+                <button class="sector-card" id="btn-mineracao" onclick="showInsight(this, 'Mineração', 'SIMINEGO', 'A dor não é o \'licenciamento ambiental\' (que já existe), mas o *acesso ao mercado de tecnologia* (Tesla, Apple) que exige \'Minerais Estratégicos de Baixo Carbono\' com rastreabilidade total.')">
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">Mineração</h3>
+                    <p class="text-sm font-semibold text-gray-500 uppercase">VETOR: Minerais Estratégicos & ESG</p>
+                </button>
+            </div>
+
+            <div id="insight-display" class="hidden mt-6">
+                <p class="text-sm font-bold uppercase tracking-wider opacity-70" id="insight-sindicato"></p>
+                <p class="text-2xl font-semibold mt-2" id="insight-text"></p>
+            </div>
+
+            <footer class="slide-footer">
+                <div>Análise de Contexto</div>
+                <div>Slide 5 de 10</div>
+            </footer>
+        </div>
+        
+        <!-- Slide 6: Exemplo Prático (Interativo) -->
+        <div class="slide-content">
+            <header class="slide-header">
+                <img src="https://i.postimg.cc/x1pYp13c/det-fieg.png" alt="Sistema FIEG Logo" class="fieg-logo-img">
+                <div class="pill pill-green">Exemplo Prático #1</div>
+            </header>
+
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Exemplo Prático #1: A Oportunidade da "Indústria Verde"</h2>
+            <p class="text-lg text-gray-700 mb-8">
+                Como a AIEF transformaria um desafio (Transição Energética) em uma receita integrada para um cliente **Top 300**?
+            </p>
+
+            <!-- Abas Interativas -->
+            <div class="flex space-x-2 border-b border-gray-300 mb-6">
+                <button class="tab-btn active" onclick="openTab(event, 'tab1')">1. O Farol (Foresight)</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab2')">2. A Ponte (BI)</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab3')">3. A Ação (Estratégia)</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab4')">4. O Resultado</button>
+            </div>
+
+            <!-- Conteúdo das Abas -->
+            <div id="tab1" class="tab-content active bg-gray-50 p-6 rounded-lg border">
+                <h3 class="text-xl font-bold text-gray-900 mb-3">1. O Farol (Foresight): Identificando o Sinal</h3>
+                <p class="text-gray-700">
+                    A AIEF (Observatório) detecta: "ESG" e "Eficiência Energética" estão se tornando barreiras de acesso a crédito (BNDES) e a mercados internacionais (taxação de carbono).
+                </p>
+                <p class="text-gray-700 mt-3">
+                    <strong>Conclusão do Foresight:</strong> A indústria (especialmente os Top 300) precisará de *comprovação* de sustentabilidade para manter sua competitividade.
+                </p>
+            </div>
+
+            <div id="tab2" class="tab-content bg-gray-50 p-6 rounded-lg border">
+                <h3 class="text-xl font-bold text-gray-900 mb-3">2. A Ponte (BI): Mapeando Ativos Internos</h3>
+                <p class="text-gray-700">
+                    A AIEF cruza essa tendência com as competências e portfólios internos:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
+                    <li><strong>SENAI (ISTs):</strong> Expertise técnica em <strong>Eficiência Energética</strong> e <strong>Automação</strong>.</li>
+                    <li><strong>IEL:</strong> Domínio da <strong>Transformação Digital</strong> (Programa Inove + Digital).</li>
+                    <li><strong>FIEG:</strong> Articulação institucional e <strong>Acesso ao Crédito</strong> (NAC).</li>
+                    <li><strong>SESI:</strong> Expertise em <strong>Saúde e Segurança (SST)</strong>, pilar fundamental do "S" do ESG.</li>
+                </ul>
+                <p class="text-gray-700 mt-3">
+                    <strong>Insight da Inteligência:</strong> Estamos vendendo produtos isolados (saúde, produtividade, digital), quando poderíamos estar vendendo uma *solução estratégica de alto valor* (Selo ESG) para nossos Top 300.
+                </p>
+            </div>
+            
+            <div id="tab3" class="tab-content bg-gray-50 p-6 rounded-lg border">
+                <h3 class="text-xl font-bold text-gray-900 mb-3">3. A Ação (Proposta Estratégica da AIEF)</h3>
+                <p class="text-gray-700">
+                    A AIEF desenha um novo *produto integrado* para um cliente Top 300: o <strong>"Pacote FIEG Indústria Verde 4.0"</strong>.
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
+                    <li><strong>AIEF + Sindicato:</strong> Valida o Selo e mobiliza o setor.</li>
+                    <li><strong>SENAI + ISTs:</strong> Fazem a consultoria de eficiência energética e descarbonização (o "E" do ESG).</li>
+                    <li><strong>SESI:</strong> Entra com o diagnóstico e plano de ação de SST (o "S" do ESG).</li>
+                    <li><strong>AIEF/FIEG:</strong> Cria um "Selo de Conformidade Verde" do Sistema FIEG.</li>
+                    <li><strong>FIEG (NAC):</strong> Leva as empresas com esse Selo para negociar linhas de crédito verde.</li>
+                </ul>
+            </div>
+            
+            <div id="tab4" class="tab-content bg-gray-50 p-6 rounded-lg border">
+                <h3 class="text-xl font-bold text-gray-900 mb-3">4. O Resultado (Valor Gerado)</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
+                    <li><strong>Para a Indústria (Top 300):</strong> Uma solução "one-stop-shop" que resolve um problema técnico (energia), de saúde (SST) e financeiro (crédito) de uma vez.</li>
+                    <li><strong>Para a GEREM (Mercado):</strong> Um produto de altíssimo valor agregado para vender, com um argumento irrefutável (acesso a crédito).</li>
+                    <li><strong>Para a ASCOM (Com.):</strong> Uma pauta positiva e concreta de "Pioneirismo em ESG".</li>
+                    <li><strong>Para o Sistema FIEG:</strong> Aumento do *Share of Wallet* no cliente Top 300, fidelização e cumprimento da missão estratégica.</li>
+                </ul>
+            </div>
+
+            <footer class="slide-footer">
+                <div>Inteligência em Ação</div>
+                <div>Slide 6 de 10</div>
+            </footer>
+        </div>
+
+        <!-- Slide 7: Exemplo Prático #2 -->
+        <div class="slide-content">
+            <header class="slide-header">
+                <img src="https://i.postimg.cc/x1pYp13c/det-fieg.png" alt="Sistema FIEG Logo" class="fieg-logo-img">
+                <div class="pill pill-green">Exemplo Prático #2</div>
+            </header>
+
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Exemplo Prático #2: O "Passaporte para Exportação"</h2>
+            <p class="text-lg text-gray-700 mb-8">
+                Como a AIEF transforma um selo técnico (IST) e uma consultoria (CIN) em uma nova linha de receita premium para um cliente **Top 300**?
+            </p>
+
+            <!-- Abas Interativas (Conjunto 2) -->
+            <div class="flex space-x-2 border-b border-gray-300 mb-6">
+                <button class="tab-btn-p2 tab-btn active" onclick="openTab2(event, 'p2-tab1')">1. O Farol (Foresight)</button>
+                <button class="tab-btn-p2 tab-btn" onclick="openTab2(event, 'p2-tab2')">2. A Ponte (BI)</button>
+                <button class="tab-btn-p2 tab-btn" onclick="openTab2(event, 'p2-tab3')">3. A Ação (Estratégia)</button>
+                <button class="tab-btn-p2 tab-btn" onclick="openTab2(event, 'p2-tab4')">4. O Resultado</button>
+            </div>
+
+            <!-- Conteúdo das Abas (Conjunto 2) -->
+            <div id="p2-tab1" class="tab-content-p2 tab-content active bg-gray-50 p-6 rounded-lg border">
+                <h3 class="text-xl font-bold text-gray-900 mb-3">1. O Farol (Foresight): Identificando a Barreira</h3>
+                <p class="text-gray-700">
+                    A AIEF detecta (via Observatório/CIN) que mercados premium (Europa, Ásia) aumentam as barreiras não-tarifárias para alimentos. A dor da indústria (Top 300 de Alimentos) não é "como exportar", mas "como *comprovar* a qualidade exigida para exportar".
+                </p>
+                <p class="text-gray-700 mt-3">
+                    <strong>Conclusão do Foresight:</strong> A exportação de alimentos tornou-se um jogo de *certificação e rastreabilidade*.
+                </p>
+            </div>
+
+            <div id="p2-tab2" class="tab-content-p2 tab-content bg-gray-50 p-6 rounded-lg border">
+                <h3 class="text-xl font-bold text-gray-900 mb-3">2. A Ponte (BI): Conectando Ativos Únicos</h3>
+                <p class="text-gray-700">
+                    A AIEF mapeia os ativos internos que respondem a essa dor:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
+                    <li><strong>Ativo FIEG (CIN):</strong> Possui a inteligência de mercado e os contatos de compradores.</li>
+                    <li><strong>Ativo SENAI (IST Alimentos):</strong> Possui a "chave técnica" — o <strong>Selo Alimento Confiável</strong>.</li>
+                    <li><strong>Ativo IEL:</strong> Possui expertise em <strong>Transformação Digital</strong> para implementar a rastreabilidade.</li>
+                    <li><strong>Ativo SESI:</strong> Pode agregar a certificação de <strong>SST</strong> dos manipuladores de alimentos.</li>
+                </ul>
+                <p class="text-gray-700 mt-3">
+                    <strong>Insight da Inteligência:</strong> Temos a *consultoria de acesso* (CIN) e a *chave técnica* (Selo IST), mas as vendemos separadamente. O valor da consultoria CIN dispara se ela vier atrelada à *garantia* de conformidade.
+                </p>
+            </div>
+            
+            <div id="p2-tab3" class="tab-content-p2 tab-content bg-gray-50 p-6 rounded-lg border">
+                <h3 class="text-xl font-bold text-gray-900 mb-3">3. A Ação (Proposta Estratégica da AIEF)</h3>
+                <p class="text-gray-700">
+                    A AIEF propõe o <strong>"Passaporte FIEG para Exportação de Alimentos"</strong> para os Top 300 do setor.
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
+                    <li><strong>AIEF + SINDALIMENT:</strong> Co-cria a demanda pelo "Passaporte" com os associados-chave.</li>
+                    <li><strong>Etapa 1 (SENAI/SESI/IEL):</strong> O IST Alimentos implementa o "Selo Alimento Confiável" + IEL implementa a rastreabilidade digital + SESI audita o SST.</li>
+                    <li><strong>Etapa 2 (FIEG-CIN):</strong> A consultoria do CIN entra para *executar* a prospecção, usando o "Pacote de Conformidade FIEG" como argumento de venda.</li>
+                </ul>
+            </div>
+            
+            <div id="p2-tab4" class="tab-content-p2 tab-content bg-gray-50 p-6 rounded-lg border">
+                <h3 class="text-xl font-bold text-gray-900 mb-3">4. O Resultado (Valor Gerado)</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
+                    <li><strong>Para a Indústria (Top 300):</strong> Uma solução "one-stop-shop" que não só a certifica, mas *abre um novo mercado* e justifica o investimento (sem subsídio).</li>
+                    <li><strong>Para a GEREM (Mercado):</strong> Vende um pacote premium (Selo + Rastreabilidade + Consultoria CIN) com ROI claro.</li>
+                    <li><strong>Para o Sistema FIEG:</strong> Cria uma nova linha de receita de alto valor, 100% interna, e blinda a relação com o cliente Top 300.</li>
+                </ul>
+            </div>
+
+            <footer class="slide-footer">
+                <div>Inteligência em Ação</div>
+                <div>Slide 7 de 10</div>
+            </footer>
+        </div>
+
+        <!-- Slide 8: Simulador Interativo AIEF (MODIFICADO E SOFISTICADO) -->
+        <div class="slide-content">
+            <header class="slide-header">
+                <img src="https://i.postimg.cc/x1pYp13c/det-fieg.png" alt="Sistema FIEG Logo" class="fieg-logo-img">
+                <div class="pill pill-blue">Simulador AIEF</div>
+            </header>
+            
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Simulador AIEF: O Atendimento em Rede na Prática</h2>
+            <p class="text-lg text-gray-700 mb-4">
+                Selecione um setor portador de futuro e veja como a AIEF usa o **Reset-Go** para transformar um "Sinal Fraco" em uma oportunidade de negócio integrada para um **Cliente Top 300**.
+            </p>
+
+            <!-- Seletor de Setor -->
+            <div class="mb-6">
+                <label for="sector-select" class="block text-sm font-medium text-gray-700 mb-2">Selecione o Setor para Simulação:</label>
+                <select id="sector-select" onchange="changeSector()" class="w-full md:w-1/2 p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="construcao">Construção Civil (Foco: Green Buildings)</option>
+                    <option value="farma">Farmacêutico (Foco: Saúde Mental Corp.)</option>
+                    <option value="moda">Vestuário & Moda (Foco: Passaporte Digital)</option>
+                    <option value="mineracao">Mineração (Foco: Rastreabilidade Verde)</option>
+                </select>
+            </div>
+
+            <!-- Contêiner do Simulador -->
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
+
+                <!-- Caminho 1: Construção Civil -->
+                <div id="path-construcao" class="sim-path active">
+                    <!-- Passo 1: O Sinal -->
+                    <div id="sim-step-construcao-1" class="sim-step active">
+                        <h4 class="text-xl font-bold text-blue-800 mb-3">PASSO 1: O SINAL (Técnica: Horizon Scanning)</h4>
+                        <p class="text-gray-700 mb-2">A AIEF (Observatório) detecta um "Sinal Fraco" para o setor da <strong>Construção Civil</strong>:</p>
+                        <p class="text-gray-800 font-medium bg-white p-3 rounded-md shadow-sm border-l-4 border-blue-500">
+                            "Novas regulações de 'Construção Verde' (Green Building) tornam-se exigência para financiamento (BNDES/Caixa) de grandes empreendimentos."
+                        </p>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('construcao', 2)">Analisar Consequências (Roda do Futuro) →</button>
+                    </div>
+                    <!-- Passo 2: A Análise -->
+                    <div id="sim-step-construcao-2" class="sim-step">
+                        <h4 class="text-xl font-bold text-blue-800 mb-3">PASSO 2: A ANÁLISE (Técnica: Roda do Futuro)</h4>
+                        <p class="text-gray-700 mb-2">A AIEF analisa as consequências para um cliente <strong>Top 300</strong> do setor:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
+                            <li><strong>Problema Estratégico:</strong> O cliente (uma grande construtora) perderá acesso a capital e a licitações públicas se não certificar suas obras.</li>
+                            <li><strong>Oportunidade:</strong> Quem criar um "Selo de Obra Limpa" local ganhará o mercado.</li>
+                        </ul>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('construcao', 3)">Diagnosticar com Reset-Go →</button>
+                    </div>
+                    <!-- Passo 3: O Diagnóstico (Reset-Go) (MODIFICADO) -->
+                    <div id="sim-step-construcao-3" class="sim-step">
+                        <h4 class="text-xl font-bold text-yellow-800 mb-3">PASSO 3: DIAGNÓSTICO (AIEF aplica o Reset-Go)</h4>
+                        <p class="text-gray-700 mb-2">A AIEF, junto com o <strong>SINDUSCON-GO</strong>, aplica a metodologia **Reset-Go** no cliente Top 300:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
+                            <li><strong>RESET (Diagnóstico):</strong> A metodologia revela que o cliente compra soluções pontuais (ensaio de material do SENAI, curso de NR-18 do SESI), mas nenhuma resolve a dor estratégica do financiamento.</li>
+                            <li><strong>GO (Plano de Ação):</strong> O plano de ação não é "comprar mais cursos", mas sim *construir um ecossistema de conformidade* (E+S+G).</li>
+                        </ul>
+                        <p class="text-yellow-900 font-semibold bg-yellow-50 p-3 rounded-md border-l-4 border-yellow-500 mt-4">
+                            <strong>Resultado do Reset-Go:</strong> A venda transacional é substituída pela co-criação de uma solução estratégica.
+                        </p>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('construcao', 4)">Ver Solução Estratégica em Rede →</button>
+                    </div>
+                    <!-- Passo 4: A Solução em Rede (AIEF) -->
+                    <div id="sim-step-construcao-4" class="sim-step">
+                        <h4 class="text-xl font-bold text-green-800 mb-3">PASSO 4: A SOLUÇÃO (Atendimento em Rede via AIEF)</h4>
+                        <p class="text-gray-700 mb-2">Com base no **Reset-Go**, a AIEF (FIEG) desenha o <strong>"Programa FIEG de Certificação de Obra Limpa"</strong>:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
+                            <li><strong>AIEF + SINDUSCON-GO (Estratégia):</strong> Articula com o Sindicato e o banco (BNDES/Caixa) para validar o Selo.</li>
+                            <li><strong>SENAI (ISTs):</strong> Audita o "E" (Eficiência Energética, P&D de materiais).</li>
+                            <li><strong>SESI (SST):</strong> Audita o "S" (Social, saúde e segurança dos trabalhadores).</li>
+                            <li><strong>IEL (Gestão):</strong> Implementa "Lean Construction" e rastreabilidade de resíduos (o "G").</li>
+                            <li><strong>FIEG (NAC):</strong> Com o "Selo FIEG", negocia a linha de crédito verde para o cliente.</li>
+                        </ul>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('construcao', 5)">Ver Resultado Final →</button>
+                    </div>
+                    <!-- Passo 5: O Resultado -->
+                    <div id="sim-step-construcao-5" class="sim-step">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">PASSO 5: O RESULTADO ESTRATÉGICO</h4>
+                        <p class="text-gray-900 font-semibold bg-green-50 p-3 rounded-md border-l-4 border-green-500 mt-4">
+                            A construtora (Top 300) não comprou um curso; ela comprou seu <strong>passaporte para o financiamento</strong>. A GEREM vendeu uma solução 4-em-1 de altíssimo valor, blindando o cliente.
+                        </p>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('construcao', 1)">Reiniciar Simulação</button>
+                    </div>
+                </div>
+
+                <!-- Caminho 2: Farmacêutico -->
+                <div id="path-farma" class="sim-path">
+                    <!-- Passo 1: O Sinal -->
+                    <div id="sim-step-farma-1" class="sim-step active">
+                        <h4 class="text-xl font-bold text-blue-800 mb-3">PASSO 1: O SINAL (Técnica: Horizon Scanning)</h4>
+                        <p class="text-gray-700 mb-2">A AIEF (Observatório) detecta um "Sinal Fraco" para o setor <strong>Farmacêutico</strong>:</p>
+                        <p class="text-gray-800 font-medium bg-white p-3 rounded-md shadow-sm border-l-4 border-blue-500">
+                            "OMS declara 'Saúde Mental' como a próxima crise de saúde global. Aumento da regulação do MTE sobre prevenção ao 'burnout'."
+                        </p>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('farma', 2)">Analisar Consequências (Roda do Futuro) →</button>
+                    </div>
+                    <!-- Passo 2: A Análise -->
+                    <div id="sim-step-farma-2" class="sim-step">
+                        <h4 class="text-xl font-bold text-blue-800 mb-3">PASSO 2: A ANÁLISE (Técnica: Roda do Futuro)</h4>
+                        <p class="text-gray-700 mb-2">A AIEF analisa as consequências para um cliente <strong>Top 300</strong> (um grande laboratório):</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
+                            <li><strong>Problema Estratégico:</strong> Aumento do absenteísmo e alta rotatividade de talentos-chave (P&D, Gestão), gerando passivos trabalhistas.</li>
+                            <li><strong>Oportunidade:</strong> Criar um "Selo de Ambiente de Trabalho Saudável e Produtivo".</li>
+                        </ul>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('farma', 3)">Diagnosticar com Reset-Go →</button>
+                    </div>
+                    <!-- Passo 3: O Diagnóstico (Reset-Go) (MODIFICADO) -->
+                    <div id="sim-step-farma-3" class="sim-step">
+                        <h4 class="text-xl font-bold text-yellow-800 mb-3">PASSO 3: DIAGNÓSTICO (AIEF aplica o Reset-Go)</h4>
+                        <p class="text-gray-700 mb-2">A AIEF, junto com o <strong>SINDIFARGO</strong>, aplica a metodologia **Reset-Go** no cliente Top 300:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
+                            <li><strong>RESET (Diagnóstico):</strong> O cliente compra "saúde" (Ginástica Laboral do SESI) e "gestão" (Curso de Liderança do IEL) separadamente.</li>
+                            <li><strong>GO (Plano de Ação):</strong> O plano revela que o *burnout* é causado pela *sobrecarga de processos* (ineficiência) e não apenas por "falta de liderança".</li>
+                        </ul>
+                        <p class="text-yellow-900 font-semibold bg-yellow-50 p-3 rounded-md border-l-4 border-yellow-500 mt-4">
+                            <strong>Resultado do Reset-Go:</strong> A dor real é a *ineficiência de processos* (domínio do SENAI) que causa o *problema de saúde* (domínio do SESI).
+                        </p>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('farma', 4)">Ver Solução Estratégica em Rede →</button>
+                    </div>
+                    <!-- Passo 4: A Solução em Rede (AIEF) -->
+                    <div id="sim-step-farma-4" class="sim-step">
+                        <h4 class="text-xl font-bold text-green-800 mb-3">PASSO 4: A SOLUÇÃO (Atendimento em Rede via AIEF)</h4>
+                        <p class="text-gray-700 mb-2">Com base no **Reset-Go**, a AIEF (FIEG) desenha o <strong>"Programa FIEG de Saúde Integral e Produtividade"</strong>:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
+                            <li><strong>AIEF + SINDIFARGO (Estratégia):</strong> Valida o programa com o Sindicato e o MTE.</li>
+                            <li><strong>SESI (Saúde):</strong> Implementa a <strong>Plataforma de Gestão de Saúde Mental</strong> (telepsicologia, analytics de absenteísmo).</li>
+                            <li><strong>SENAI (Produtividade):</strong> Entra com "Lean Manufacturing" para identificar e eliminar a *sobrecarga* (a *causa* do estresse).</li>
+                            <li><strong>IEL (Gestão):</strong> Aplica "Treinamento de Liderança Humanizada" focado na nova cultura.</li>
+                        </ul>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('farma', 5)">Ver Resultado Final →</button>
+                    </div>
+                    <!-- Passo 5: O Resultado -->
+                    <div id="sim-step-farma-5" class="sim-step">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">PASSO 5: O RESULTADO ESTRATÉGICO</h4>
+                        <p class="text-gray-900 font-semibold bg-green-50 p-3 rounded-md border-l-4 border-green-500 mt-4">
+                            O cliente (Top 300) não compra um curso, ele compra <strong>redução de absenteísmo</strong> e <strong>retenção de talentos</strong>. A GEREM vende um pacote de assinatura (SaaS + Consultoria) de alto valor.
+                        </p>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('farma', 1)">Reiniciar Simulação</button>
+                    </div>
+                </div>
+
+                <!-- Caminho 3: Vestuário & Moda -->
+                <div id="path-moda" class="sim-path">
+                    <!-- Passo 1: O Sinal -->
+                    <div id="sim-step-moda-1" class="sim-step active">
+                        <h4 class="text-xl font-bold text-blue-800 mb-3">PASSO 1: O SINAL (Técnica: Horizon Scanning)</h4>
+                        <p class="text-gray-700 mb-2">A AIEF (Observatório) detecta um "Sinal Fraco" para o setor de <strong>Vestuário & Moda</strong>:</p>
+                        <p class="text-gray-800 font-medium bg-white p-3 rounded-md shadow-sm border-l-4 border-blue-500">
+                            "Novas leis na UE ('Fashion Act') exigirão 'Passaporte Digital de Produto', rastreando toda a cadeia têxtil (ESG)."
+                        </p>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('moda', 2)">Analisar Consequências (Roda do Futuro) →</button>
+                    </div>
+                    <!-- Passo 2: A Análise -->
+                    <div id="sim-step-moda-2" class="sim-step">
+                        <h4 class="text-xl font-bold text-blue-800 mb-3">PASSO 2: A ANÁLISE (Técnica: Roda do Futuro)</h4>
+                        <p class="text-gray-700 mb-2">A AIEF analisa as consequências para um cliente <strong>Top 300</strong> (grande confecção):</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
+                            <li><strong>Problema Estratégico:</strong> O cliente será bloqueado de exportar (B2B) e de vender para grandes varejistas (Renner, C&A) se não tiver rastreabilidade.</li>
+                            <li><strong>Oportunidade:</strong> Criar a "Cadeia Têxtil Digital e Sustentável de Goiás".</li>
+                        </ul>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('moda', 3)">Diagnosticar com Reset-Go →</button>
+                    </div>
+                    <!-- Passo 3: O Diagnóstico (Reset-Go) (MODIFICADO) -->
+                    <div id="sim-step-moda-3" class="sim-step">
+                        <h4 class="text-xl font-bold text-yellow-800 mb-3">PASSO 3: DIAGNÓSTICO (AIEF aplica o Reset-Go)</h4>
+                        <p class="text-gray-700 mb-2">A AIEF, junto com o <strong>SINDIVEST</strong>, aplica a metodologia **Reset-Go** no cliente Top 300:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
+                            <li><strong>RESET (Diagnóstico):</strong> O cliente sabe da lei (via CIN) e comprou um curso de E-commerce (IEL), mas não tem a *tecnologia* para implementar a rastreabilidade.</li>
+                            <li><strong>GO (Plano de Ação):</strong> O plano exige uma solução que integre a *produção limpa* (SENAI), o *trabalho justo* (SESI) e a *tecnologia de rastreio* (IEL).</li>
+                        </ul>
+                        <p class="text-yellow-900 font-semibold bg-yellow-50 p-3 rounded-md border-l-4 border-yellow-500 mt-4">
+                            <strong>Resultado do Reset-Go:</strong> A dor real é a *implementação tecnológica* (IEL/SENAI) de uma exigência *social* (SESI) e de *mercado* (CIN).
+                        </p>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('moda', 4)">Ver Solução Estratégica em Rede →</button>
+                    </div>
+                    <!-- Passo 4: A Solução em Rede (AIEF) -->
+                    <div id="sim-step-moda-4" class="sim-step">
+                        <h4 class="text-xl font-bold text-green-800 mb-3">PASSO 4: A SOLUÇÃO (Atendimento em Rede via AIEF)</h4>
+                        <p class="text-gray-700 mb-2">Com base no **Reset-Go**, a AIEF (FIEG) desenha o <strong>"Selo FIEG de Rastreabilidade Têxtil (Digital Fashion)"</strong>:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
+                            <li><strong>AIEF + SINDIVEST (Estratégia):</strong> Articula com o Sindicato e grandes compradores (varejistas).</li>
+                            <li><strong>IEL (Digital):</strong> Lidera o projeto, implementando a plataforma de <strong>rastreabilidade</strong> (Blockchain/QR Code) na etiqueta.</li>
+                            <li><strong>SENAI (Tecnologia/IST):</strong> Audita a "produção limpa" (químicos, água) (o "E" do ESG).</li>
+                            <li><strong>SESI (SST):</strong> Audita o "S" (Social), garantindo "trabalho justo" na cadeia.</li>
+                            <li><strong>FIEG (CIN):</strong> Usa o "Selo" para (re)abrir o mercado da UE/EUA para o cliente.</li>
+                        </ul>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('moda', 5)">Ver Resultado Final →</button>
+                    </div>
+                    <!-- Passo 5: O Resultado -->
+                    <div id="sim-step-moda-5" class="sim-step">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">PASSO 5: O RESULTADO ESTRATÉGICO</h4>
+                        <p class="text-gray-900 font-semibold bg-green-50 p-3 rounded-md border-l-4 border-green-500 mt-4">
+                            O cliente (Top 300) não compra um curso, ele compra <strong>acesso ao mercado internacional e aos grandes varejistas</strong>. A GEREM vende um pacote de adequação ESG de alto valor.
+                        </p>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('moda', 1)">Reiniciar Simulação</button>
+                    </div>
+                </div>
+                
+                <!-- Caminho 4: Mineração -->
+                <div id="path-mineracao" class="sim-path">
+                    <!-- Passo 1: O Sinal -->
+                    <div id="sim-step-mineracao-1" class="sim-step active">
+                        <h4 class="text-xl font-bold text-blue-800 mb-3">PASSO 1: O SINAL (Técnica: Horizon Scanning)</h4>
+                        <p class="text-gray-700 mb-2">A AIEF (Observatório) detecta um "Sinal Fraco" para o setor de <strong>Mineração</strong>:</p>
+                        <p class="text-gray-800 font-medium bg-white p-3 rounded-md shadow-sm border-l-4 border-blue-500">
+                            "'Taxonomia Verde' da UE/China reclassifica 'minerais estratégicos'. 'Mineração de Baixo Carbono' torna-se exigência para cadeias de baterias e eletrônicos."
+                        </p>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('mineracao', 2)">Analisar Consequências (Roda do Futuro) →</button>
+                    </div>
+                    <!-- Passo 2: A Análise -->
+                    <div id="sim-step-mineracao-2" class="sim-step">
+                        <h4 class="text-xl font-bold text-blue-800 mb-3">PASSO 2: A ANÁLISE (Técnica: Roda do Futuro)</h4>
+                        <p class="text-gray-700 mb-2">A AIEF analisa as consequências para um cliente <strong>Top 300</strong> (grande mineradora):</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
+                            <li><strong>Problema Estratégico:</strong> Sem *provar* (auditar) que sua extração é de 'baixo carbono', perde contratos para Tesla, Apple, BYD, Vale.</li>
+                            <li><strong>Oportunidade:</strong> Criar um "Selo de Mineração Verde" do Cerrado, auditado pelo Sistema FIEG.</li>
+                        </ul>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('mineracao', 3)">Diagnosticar com Reset-Go →</button>
+                    </div>
+                    <!-- Passo 3: O Diagnóstico (Reset-Go) (MODIFICADO) -->
+                    <div id="sim-step-mineracao-3" class="sim-step">
+                        <h4 class="text-xl font-bold text-yellow-800 mb-3">PASSO 3: DIAGNÓSTICO (AIEF aplica o Reset-Go)</h4>
+                        <p class="text-gray-700 mb-2">A AIEF, junto com o <strong>SIMINEGO</strong>, aplica a metodologia **Reset-Go** no cliente Top 300:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
+                            <li><strong>RESET (Diagnóstico):</strong> O cliente compra ensaios de metrologia (SENAI) e testes de audiometria (SESI).</li>
+                            <li><strong>GO (Plano de Ação):</strong> O plano revela que a dor não é o ensaio, mas a *falta de uma auditoria integrada* (Ambiental + Social + Digital) que o mercado de tecnologia exige.</li>
+                        </ul>
+                        <p class="text-yellow-900 font-semibold bg-yellow-50 p-3 rounded-md border-l-4 border-yellow-500 mt-4">
+                            <strong>Resultado do Reset-Go:</strong> A dor real é *comprovar a rastreabilidade ESG* da operação.
+                        </p>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('mineracao', 4)">Ver Solução Estratégica em Rede →</button>
+                    </div>
+                    <!-- Passo 4: A Solução em Rede (AIEF) -->
+                    <div id="sim-step-mineracao-4" class="sim-step">
+                        <h4 class="text-xl font-bold text-green-800 mb-3">PASSO 4: A SOLUÇÃO (Atendimento em Rede via AIEF)</h4>
+                        <p class="text-gray-700 mb-2">Com base no **Reset-Go**, a AIEF (FIEG) desenha o <strong>"Programa FIEG de Mineração Responsável 4.0"</strong>:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
+                            <li><strong>AIEF + SIMINEGO (EstratégIA):</strong> Articulam com ANM e compradores globais para validar o Selo.</li>
+                            <li><strong>SENAI (ISTs):</strong> Audita o "E" (Eficiência Energética, P&D de 'mineração limpa').</li>
+                            <li><strong>SESI (SST):</strong> Audita o "S" (Social e Saúde Ocupacional), vital para o licenciamento e ESG.</li>
+                            <li><strong>IEL (Digital):</strong> Implementa a <strong>rastreabilidade</strong> (blockchain) do mineral, da mina ao porto.</li>
+                        </ul>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('mineracao', 5)">Ver Resultado Final →</button>
+                    </div>
+                    <!-- Passo 5: O Resultado -->
+                    <div id="sim-step-mineracao-5" class="sim-step">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">PASSO 5: O RESULTADO ESTRATÉGICO</h4>
+                        <p class="text-gray-900 font-semibold bg-green-50 p-3 rounded-md border-l-4 border-green-500 mt-4">
+                            O cliente (Top 300) não compra um ensaio; ele compra seu <strong>acesso ao mercado global de eletrônicos e baterias</strong>. A GEREM vende um pacote de certificação ESG de altíssimo valor.
+                        </p>
+                        <button class="tab-btn active mt-5" onclick="runSimulator('mineracao', 1)">Reiniciar Simulação</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="slide-footer">
+                <div>Inteligência em Ação</div>
+                <div>Slide 8 de 10</div>
+            </footer>
+        </div>
+
+        <!-- Slide 9: Dashboards e Indicadores Estratégicos (MODIFICADO) -->
+        <div class="slide-content">
+            <header class="slide-header">
+                <img src="https://i.postimg.cc/x1pYp13c/det-fieg.png" alt="Sistema FIEG Logo" class="fieg-logo-img">
+                <div class="pill pill-gray">Medição</div>
+            </header>
+            
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Indicadores Estratégicos (Foco: Top 300)</h2>
+            <p class="text-lg text-gray-700 mb-8">
+                A AIEF não será medida por vendas, mas pela capacidade de *blindar e expandir* nossos clientes mais estratégicos.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- KPI 1 -->
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200 text-center shadow-sm">
+                    <div class="text-4xl font-bold text-blue-700 mb-2">SoW</div>
+                    <h4 class="text-md font-semibold text-gray-800 mb-2">Share of Wallet (Top 300)</h4>
+                    <p class="text-sm text-gray-600">% do gasto do cliente (P&D, Saúde, Gestão) que está no Sistema FIEG vs. concorrentes.</p>
+                </div>
+                <!-- KPI 2 -->
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200 text-center shadow-sm">
+                    <div class="text-4xl font-bold text-blue-700 mb-2">IR</div>
+                    <h4 class="text-md font-semibold text-gray-800 mb-2">Índice de Retenção (Top 300)</h4>
+                    <p class="text-sm text-gray-600">Taxa de renovação e permanência dos 300 maiores contribuintes na nossa base de clientes.</p>
+                </div>
+                <!-- KPI 3 -->
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200 text-center shadow-sm">
+                    <div class="text-4xl font-bold text-blue-700 mb-2">IAR</div>
+                    <h4 class="text-md font-semibold text-gray-800 mb-2">Índice de Adoção em Rede</h4>
+                    <p class="text-sm text-gray-600">Nº de clientes (Top 300) que consomem pacotes integrados (multi-entidade) via Sindicato.</p>
+                </div>
+                <!-- KPI 4 -->
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200 text-center shadow-sm">
+                    <div class="text-4xl font-bold text-blue-700 mb-2">TCT</div>
+                    <h4 class="text-md font-semibold text-gray-800 mb-2">Taxa de Conversão de Tendências</h4>
+                    <p class="text-sm text-gray-600">Nº de oportunidades (do Observatório) que se tornaram produtos faturados para os Top 300.</p>
+                </div>
+            </div>
+
+            <footer class="slide-footer">
+                <div>Dashboards Estratégicos</div>
+                <div>Slide 9 de 10</div>
+            </footer>
+        </div>
+
+        <!-- Slide 10: Conclusão (MODIFICADO) -->
+        <div class="slide-content bg-gray-800 text-white">
+            <header class="slide-header border-gray-600">
+                <img src="https://i.postimg.cc/x1pYp13c/det-fieg.png" alt="Sistema FIEG Logo" class="fieg-logo-img">
+                <div class="pill pill-green">Decisão</div>
+            </header>
+            
+            <h2 class="text-3xl font-bold mb-6">O Custo da Inação vs. O Valor do Foresight</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+                <div class="bg-red-100 p-6 rounded-lg text-red-900 border border-red-200">
+                    <h3 class="text-2xl font-bold mb-3">O Custo de Não Agir</h3>
+                    <p>
+                        Continuaremos com vendas pontuais e em silos. O "dinheiro ficará na mesa" por falta de cross-selling estratégico.
+                    </p>
+                    <p class="mt-3">
+                        Corremos o risco de perder um cliente do <strong>Top 300</strong> para um concorrente que ofereceu uma solução integrada que *nós* poderíamos ter oferecido.
+                    </p>
+                </div>
+                
+                <div class="bg-green-100 p-6 rounded-lg text-green-900 border border-green-200">
+                    <h3 class="text-2xl font-bold mb-3">O Valor da AIEF</h3>
+                    <p>
+                        Decisões mais rápidas e inteligentes. Sinergia real entre as entidades. Maximização do ROI dos nossos dados e da metodologia <strong>Reset-Go</strong>.
+                    </p>
+                    <p class="mt-3">
+                        Nos tornamos um parceiro estratégico indispensável, <strong class="font-semibold">blindando nossa receita</strong> e expandindo nosso valor para os 300 clientes mais importantes de Goiás.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-2xl font-semibold opacity-90">Vamos construir essa ponte.</p>
+                <p class="text-lg opacity-70 mt-2">Obrigado.</p>
+            </div>
+
+            <footer class="slide-footer border-gray-600 opacity-70">
+                <div>Proposta de Criação AIEF</div>
+                <div>Slide 10 de 10</div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Função para abas do Exemplo 1 (Slide 6)
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Função para abas do Exemplo 2 (Slide 7)
+        function openTab2(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content-p2");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn-p2");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // --- Funções do Slide 5 (Setores Portadores) ---
+        var currentActiveSector = null;
+        function showInsight(clickedBtn, sector, sindicato, insight) {
+            var display = document.getElementById("insight-display");
+            var sindicatoEl = document.getElementById("insight-sindicato");
+            var textEl = document.getElementById("insight-text");
+            
+            if (currentActiveSector && currentActiveSector !== clickedBtn) {
+                currentActiveSector.classList.remove("active");
+            }
+
+            if (display.classList.contains("hidden") === false && currentActiveSector === clickedBtn) {
+                display.classList.add("hidden");
+                clickedBtn.classList.remove("active");
+                currentActiveSector = null;
+            } else {
+                sindicatoEl.textContent = "Parceiro Estratégico: " + sindicato;
+                textEl.innerHTML = "Insight AIEF: " + insight; 
+                display.classList.remove("hidden");
+                
+                clickedBtn.classList.add("active");
+                currentActiveSector = clickedBtn;
+            }
+        }
+
+
+        // --- Funções do Simulador (Slide 8) ---
+        // 1. Troca o setor (caminho)
+        function changeSector() {
+            var select = document.getElementById("sector-select");
+            var selectedValue = select.value;
+            
+            var paths = document.getElementsByClassName("sim-path");
+            for (var i = 0; i < paths.length; i++) {
+                paths[i].style.display = "none";
+                paths[i].classList.remove("active");
+            }
+
+            var activePath = document.getElementById("path-" + selectedValue);
+            activePath.style.display = "block";
+            activePath.classList.add("active");
+
+            runSimulator(selectedValue, 1);
+        }
+
+        // 2. Avança os passos dentro de um setor
+        function runSimulator(sector, step) {
+            var steps = document.querySelectorAll("#path-" + sector + " .sim-step");
+            for (var i = 0; i < steps.length; i++) {
+                steps[i].style.display = "none";
+                steps[i].classList.remove("active");
+            }
+            
+            var nextStep = document.getElementById("sim-step-" + sector + "-" + step);
+            if (nextStep) {
+                nextStep.style.display = "block";
+                nextStep.classList.add("active");
+            }
+        }
+
+        // --- Inicialização no Carregamento ---
+        document.addEventListener("DOMContentLoaded", function() {
+            // Inicializa abas do Exemplo 1 (Slide 6)
+            if (document.getElementById("tab1")) {
+                document.getElementById("tab1").style.display = "block";
+                var tab1Button = document.querySelector(".tab-btn");
+                if (tab1Button) {
+                    tab1Button.classList.add("active");
+                }
+            }
+            
+            // Inicializa abas do Exemplo 2 (Slide 7)
+            if(document.getElementById("p2-tab1")) {
+                document.getElementById("p2-tab1").style.display = "block";
+                var p2Button = document.querySelector(".tab-btn-p2");
+                if (p2Button) {
+                    p2Button.classList.add("active");
+                }
+            }
+            
+            // Inicializa Slide 5 (Setores) - com uma mensagem padrão
+            var display = document.getElementById("insight-display");
+            if (display) {
+                var sindicatoEl = document.getElementById("insight-sindicato");
+                var textEl = document.getElementById("insight-text");
+                sindicatoEl.textContent = "O CAMPO DE JOGO ESTRATÉGICO";
+                textEl.textContent = "Clique em um setor acima para ver o insight e o Sindicato parceiro-chave.";
+                display.classList.remove("hidden");
+            }
+
+
+            // Inicializa o Simulador (Slide 8)
+            if(document.getElementById("sector-select")) {
+                changeSector(); 
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+
