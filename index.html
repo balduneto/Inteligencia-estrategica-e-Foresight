@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Defesa ACEIC - Sistema FIEG</title>
+    <title>Defesa ACEIP - Sistema FIEG</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
@@ -80,738 +80,480 @@
             font-weight: 500;
             cursor: pointer;
             transition: all 0.2s;
+            font-size: 0.875rem; /* Texto menor para caber mais abas */
         }
         .tab-btn.active, .tab-btn:hover {
             background-color: #004a91;
             color: #ffffff;
         }
         
-        /* Estilos do Simulador */
-        .sim-step {
-            display: none;
-        }
-        .sim-step.active {
-            display: block;
-        }
-        .sim-path {
-            display: none;
-        }
-        .sim-path.active {
-            display: block;
-        }
-        
-        /* Estilos Setores Portadores (Slide 5) */
-        .sector-card {
-            background-color: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 0.5rem;
-            padding: 1.5rem;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.2s ease-in-out;
-            height: 100%;
-        }
-        .sector-card:hover, .sector-card.active {
-            background-color: #fff;
-            border-color: #004a91;
-            box-shadow: 0 4px 10px rgba(0, 74, 145, 0.1);
-            transform: translateY(-2px);
-        }
-        #insight-display {
-            background-color: #004a91;
-            color: white;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            margin-top: 1.5rem;
-        }
-
     </style>
 </head>
 <body class="bg-gray-100">
 
     <div class="slide-container">
-        <!-- Slide 1: Capa (Linguagem mais didática) --><div class="slide-content bg-gray-100">
+        <!-- Slide 1: Capa --><div class="slide-content bg-gray-100">
             <header class="slide-header border-gray-300">
-                <!-- Logo ATUALIZADA --><img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
+                <img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
                 <div class="text-right text-gray-700">
                     <p class="font-semibold">Defesa Estratégica</p>
-                    <p class="text-sm opacity-80">Inteligência Competitiva & Comunicação</p>
+                    <p class="text-sm opacity-80">Comunicação Estratégica & Inteligência Prospectiva</p>
                 </div>
             </header>
             
             <div class="py-16 text-center text-gray-800">
-                <h1 class="text-5xl font-black mb-4 text-gray-900">O Farol e a Ponte</h1>
+                <h1 class="text-5xl font-black mb-4 text-gray-900">Assessoria de Comunicação Estratégica e Inteligência Prospectiva (ACEIP)</h1>
                 <p class="text-2xl font-light opacity-90 max-w-3xl mx-auto text-gray-700">
-                    Proposta de criação da Assessoria de Comunicação Estratégica e Inteligência Competitiva (ACEIC)
-                </p>
-                <p class="text-lg mt-6 opacity-80 text-gray-700">
-                    Uma proposta para <strong>conectar</strong> dados, <strong>integrar</strong> soluções e <strong>construir</strong> o futuro da indústria em Goiás.
+                    Alinhando narrativa, posicionamento e visão de futuro.
                 </p>
             </div>
 
             <footer class="slide-footer border-gray-300">
-                <div>Proposta para Presidência & Diretorias</div>
-                <div>Slide 1 de 13</div>
+                <div>Proposta para Superintendência FIEG</div>
+                <div>Slide 1 de 10</div>
             </footer>
         </div>
 
-        <!-- Slide 2: Liderança (IMAGEM ATUALIZADA) --><div class="slide-content">
+        <!-- Slide 2: Liderança --><div class="slide-content">
             <header class="slide-header">
-                <!-- Logo ATUALIZADA --><img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
+                <img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
                 <div class="pill pill-gray">Liderança</div>
             </header>
             
-            <!-- Content Area: Image --><div class="flex justify-center items-center py-8">
+            <div class="flex justify-center items-center py-8">
                 <img src="https://i.postimg.cc/28YCQryR/neto.png" alt="Foto de Sandro Mabel, Presidente da FIEG" class="rounded-lg shadow-md" style="max-height: 480px; width: auto;">
             </div>
 
             <footer class="slide-footer">
-                <div>Proposta para Presidência & Diretorias</div>
-                <div>Slide 2 de 13</div>
+                <div>Proposta para Superintendência FIEG</div>
+                <div>Slide 2 de 10</div>
             </footer>
         </div>
 
-        <!-- Slide 3: O Cenário Atual --><div class="slide-content">
+        <!-- Slide 3: O Gap Estratégico --><div class="slide-content">
             <header class="slide-header">
-                <!-- Logo ATUALIZADA --><img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
+                <img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
                 <div class="pill pill-gray">Contexto</div>
             </header>
             
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">Cenário Atual: Um Sistema de Excelência e Múltiplos Ativos</h2>
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">O Gap Atual: Do Comercial à Inteligência Estratégica</h2>
             <p class="text-lg text-gray-700 mb-8">
-                Possuímos um portfólio vasto (FIEG, SESI, SENAI, IEL), áreas de execução robustas (GEREM, ASCOM) e o motor de dados (Observatório). Mais importante, temos os **300 maiores contribuintes** como parceiros-chave.
+                Hoje, nosso relacionamento com os maiores contribuintes é focado no modelo comercial (venda de produtos). A criação da ACEIP é o passo natural para transformar esse modelo, elevando-o para um sistema de inteligência estratégica e aprendizado contínuo.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                    <h3 class="text-xl font-bold text-blue-800 mb-3">Ativos Atuais (O que TEMOS)</h3>
+                <div class="bg-red-50 p-6 rounded-lg border border-red-200">
+                    <h3 class="text-xl font-bold text-red-800 mb-3">Modelo Atual (Comercial / Reativo)</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li><span class="font-semibold">GEREM & ASCOM:</span> Execução tática de vendas e comunicação.</li>
-                        <li><span class="font-semibold">Observatório da Indústria:</span> Fonte primária de dados macro (O Farol).</li>
-                        <li><span class="font-semibold">Top 300 Contribuintes:</span> Nossos "Key Accounts" que garantem a sustentabilidade do Sistema.</li>
-                        <li><span class="font-semibold">Portfólios Ricos (SESI/SENAI/IEL):</span> Dezenas de produtos e dados operacionais (vistos nos portfólios).</li>
+                        <li>Foco na venda do portfólio (o que *temos*).</li>
+                        <li>Inteligência pulverizada em silos (CRMs).</li>
+                        <li>Comunicação reativa ou tática.</li>
+                        <li>Sindicatos como clientes, não parceiros de inteligência.</li>
+                        <li>Decisões baseadas no "passado" (o que vendeu).</li>
                     </ul>
                 </div>
                 
-                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                    <h3 class="text-xl font-bold text-red-800 mb-3">O Gap Estratégico (O que FALTA)</h3>
+                <div class="bg-green-50 p-6 rounded-lg border border-green-200">
+                    <h3 class="text-xl font-bold text-green-800 mb-3">Modelo Proposto (Inteligência / Preditivo)</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li><span class="font-semibold">Visão Sistêmica Unificada:</span> Os dados dos "Top 300" estão em silos. Quem cruza os dados de SST (SESI) com os de P&D (SENAI) desse cliente?</li>
-                        <li><span class="font-semibold">Gestão de "Key Accounts" (KAM):</span> Falta uma inteligência proativa focada em *blindar e expandir* os Top 300.</li>
-                        <li><span class="font-semibold">Tradução de Tendências:</span> Como o dado do Observatório vira um *novo produto* integrado para um desses 300 clientes?</li>
+                        <li>Foco na dor estratégica do cliente (o que *precisam*).</li>
+                        <li>Inteligência centralizada e conectada (ACEIP).</li>
+                        <li>Comunicação estratégica e prospectiva.</li>
+                        <li>Sindicatos como parceiros de co-criação de cenários.</li>
+                        <li>Decisões baseadas no "futuro" (o que será demandado).</li>
                     </ul>
                 </div>
             </div>
 
             <footer class="slide-footer">
-                <div>Análise de Contexto</div>
-                <div>Slide 3 de 13</div>
+                <div>Fundamentação Estratégica</div>
+                <div>Slide 3 de 10</div>
             </footer>
         </div>
 
-        <!-- Slide 4: A Solução (ACEIC) (Termo "Reset-Go" substituído) --><div class="slide-content">
+        <!-- Slide 4: Missão, Visão e 5 Eixos (Interativo) --><div class="slide-content" id="slide4">
             <header class="slide-header">
-                <!-- Logo ATUALIZADA --><img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
+                <img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
                 <div class="pill pill-blue">A Proposta</div>
             </header>
             
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">A Solução: Assessoria de Comunicação Estratégica e Inteligência Competitiva (ACEIC)</h2>
-            <p class="text-lg text-gray-700 mb-8">
-                Uma assessoria leve, gerida pela FIEG, que atua como um <strong>elo de conexão e inteligência</strong> do Sistema. A ACEIC organiza a inteligência que permite às entidades (SESI, SENAI, IEL) atuarem de forma ainda mais integrada, com foco total nos nossos principais parceiros.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- O Farol (Foresight) --><div class="bg-blue-50 p-6 rounded-lg border border-blue-200 text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 text-blue-600 mx-auto mb-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639l4.433-7.467a1.012 1.012 0 0 1 1.636 0l4.433 7.467a1.012 1.012 0 0 1 0 .639l-4.433 7.467a1.012 1.012 0 0 1-1.636 0l-4.433-7.467Z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                    </svg>
-                    <h3 class="text-2xl font-bold text-blue-800 mb-3">Função 1: FORESIGHT (O Farol)</h3>
-                    <p class="text-gray-700">
-                        Usar o <strong>Observatório da Indústria</strong> como um radar de longo alcance. Traduzir tendências em "mapas de oportunidade" para as entidades e Sindicatos.
-                    </p>
-                    <p class="font-semibold mt-3 text-blue-900">"O que vem por aí e como podemos ser pioneiros?"</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Missão</h3>
+                    <p class="text-gray-700">Traduzir informação, contexto e sinais emergentes em narrativas, cenários e oportunidades estratégicas para o Sistema FIEG e suas casas operacionais (SESI, SENAI e IEL).</p>
                 </div>
-                
-                <!-- A Ponte (Conexão) (Termo "Reset-Go" substituído) --><div class="bg-green-50 p-6 rounded-lg border border-green-200 text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 text-green-600 mx-auto mb-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0M3.75 18H7.5m3-6h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0M3.75 12H7.5" />
-                    </svg>
-                    <h3 class="text-2xl font-bold text-green-800 mb-3">Função 2: CONEXÃO (A Ponte)</h3>
-                    <p class="text-gray-700">
-                        Usar <strong>Estratégias Colaborativas</strong> para o diagnóstico profundo e <strong>conectar</strong> soluções (Atendimento em Rede), com *foco prioritário nos Top 300 contribuintes*.
-                    </p>
-                    <p class="font-semibold mt-3 text-green-900">"Quais são as dores estratégicas dos nossos Top 300 agora?"</p>
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Visão</h3>
+                    <p class="text-gray-700">Ser o núcleo de inteligência prospectiva do Sistema FIEG, conectando o presente à estratégia de longo prazo por meio da comunicação, foresight e análise competitiva.</p>
                 </div>
             </div>
 
-            <footer class="slide-footer">
-                <div>Mandato da ACEIC</div>
-                <div>Slide 4 de 13</div>
-            </footer>
-        </div>
-
-        <!-- Slide 5: O Elo - Como a ACEIC se Encaixa (Termo "Reset-Go" substituído) --><div class="slide-content">
-            <header class="slide-header">
-                <!-- Logo ATUALIZADA --><img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
-                <div class="pill pill-blue">Integração com Sindicatos</div>
-            </header>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Os 5 Eixos de Atuação da ACEIP</h2>
             
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">Como a ACEIC Atua: O Elo de Conexão</h2>
-            <p class="text-lg text-gray-700 mb-8">
-                A ACEIC **identifica e traduz** as oportunidades ("O Quê" + "Porquê"), **apoiando** os Sindicatos e a GEREM na execução do "Como" (a mobilização e a venda) com foco nos **Top 300**.
-            </p>
+            <div class="flex flex-wrap gap-2 border-b border-gray-300 mb-6">
+                <button class="tab-btn active" onclick="openEixoTab(event, 'eixo1')">1. Com. Estratégica</button>
+                <button class="tab-btn" onclick="openEixoTab(event, 'eixo2')">2. Intel. Prospectiva</button>
+                <button class="tab-btn" onclick="openEixoTab(event, 'eixo3')">3. Intel. Competitiva</button>
+                <button class="tab-btn" onclick="openEixoTab(event, 'eixo4')">4. Produção de Conhecimento</button>
+                <button class="tab-btn" onclick="openEixoTab(event, 'eixo5')">5. Articulação Institucional</button>
+            </div>
 
-            <!-- Diagrama de Fluxo (Termo "Reset-Go" substituído) --><div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 text-center">
-                
-                <!-- Fonte de Dados --><div class="flex flex-col items-center">
-                    <div class="p-4 bg-gray-100 rounded-lg shadow-inner">
-                        <span class="font-semibold">FONTES DE DADOS</span>
-                        <ul class="text-sm text-gray-600 list-disc list-inside text-left mt-2">
-                            <li><strong>Observatório (FIEG)</strong></li>
-                            <li>CRMs (SESI/SENAI/IEL)</li>
-                            <li><strong>Lista Top 300 (FIEG)</strong></li>
-                            <li>Mercado (CNI, Sebrae)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="text-2xl font-bold text-blue-600 transform rotate-90 md:rotate-0">→</div>
-
-                <!-- ACEIC --><div class="flex flex-col items-center">
-                    <div class="p-6 bg-blue-100 border-2 border-blue-500 rounded-lg shadow-lg">
-                        <span class="font-bold text-blue-800 text-lg">ACEIC (Gestão FIEG)</span>
-                        <p class="text-sm text-blue-700 mt-2">Gera o "O Quê" e o "Porquê"</p>
-                        <ul class="text-sm text-blue-600 list-disc list-inside text-left mt-2">
-                            <li>Foresight (Observatório)</li>
-                            <li><strong>Diagnóstico Colaborativo</strong></li>
-                            <li><strong>Foco: Top 300 Contas</strong></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="text-2xl font-bold text-blue-600 transform rotate-90 md:rotate-0">→</div>
-
-                <!-- Áreas de Execução --><div class="flex flex-col space-y-4">
-                    <div class="p-4 bg-green-100 rounded-lg shadow">
-                        <span class="font-semibold text-green-800">SINDICATOS SETORIAIS</span>
-                        <p class="text-sm text-green-700 mt-1">Mobilização Setorial (Key Accounts)</p>
-                    </div>
-                    <div class="p-4 bg-green-100 rounded-lg shadow">
-                        <span class="font-semibold text-green-800">GERÊNCIA DE MERCADO</span>
-                        <p class="text-sm text-green-700 mt-1">Execução de Vendas (B2B/B2C)</p>
-                    </div>
-                    <div class="p-4 bg-green-100 rounded-lg shadow">
-                        <span class="font-semibold text-green-800">ASSESSORIA DE COM.</span>
-                        <p class="text-sm text-green-700 mt-1">Execução da Narrativa (Branding)</p>
-                    </div>
-                </div>
+            <div id="eixo1" class="tab-content active bg-gray-50 p-6 rounded-lg border">
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Eixo 1: Comunicação Estratégica Institucional</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Unificar linguagem e posicionamento entre SESI, SENAI, IEL e FIEG.</li>
+                    <li>Elaborar narrativas de impacto para apresentações executivas e fóruns setoriais.</li>
+                    <li>Criar painéis visuais e dashboards narrativos para a alta gestão.</li>
+                    <li>Desenvolver relatórios de impacto e valor agregado para os grupos G1 e G2 (Top 300+).</li>
+                </ul>
+            </div>
+            <div id="eixo2" class="tab-content bg-gray-50 p-6 rounded-lg border">
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Eixo 2: Inteligência Prospectiva e Cenários (Foresight)</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Aplicar metodologias de Foresight (Future Wheels, STEEP, Causal Layered Analysis).</li>
+                    <li>Mapear sinais fracos, tendências e rupturas relevantes para os setores industriais de Goiás.</li>
+                    <li>Co-construir cenários de futuro com lideranças do Sistema FIEG e representantes das indústrias.</li>
+                    <li>Elaborar painéis de oportunidades vinculados às agendas estratégicas da FIEG.</li>
+                </ul>
+            </div>
+            <div id="eixo3" class="tab-content bg-gray-50 p-6 rounded-lg border">
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Eixo 3: Inteligência Competitiva e Dados de Mercado</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Criar e manter um Observatório de Oportunidades e Relacionamento (foco na Estratégia 300+).</li>
+                    <li>Integrar dados de CRM, Power BI e checklists operacionais das Gerências.</li>
+                    <li>Gerar insights acionáveis sobre comportamento de compra, recorrência e potencial de expansão.</li>
+                    <li>Monitorar indicadores-chave (NPS, penetração SENAI/SESI/IEL, tempo de ativação, etc.).</li>
+                </ul>
+            </div>
+            <div id="eixo4" class="tab-content bg-gray-50 p-6 rounded-lg border">
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Eixo 4: Produção de Conhecimento e Suporte Decisório</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Estruturar relatórios executivos temáticos: “Futuro da Indústria Goiana”, “Transformação Industrial 2030”.</li>
+                    <li>Oferecer briefings estratégicos para a Superintendência e pitches personalizados para os grupos G1–G4.</li>
+                    <li>Manter boletins de inteligência quinzenais para as Gerências e Diretores Regionais.</li>
+                </ul>
+            </div>
+            <div id="eixo5" class="tab-content bg-gray-50 p-6 rounded-lg border">
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Eixo 5: Articulação Institucional e Governança da Informação</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Atuar como interlocutor único entre Comunicação, Mercado e Superintendência.</li>
+                    <li>Garantir coerência entre discurso, dados e decisões.</li>
+                    <li>Implementar rituais de alinhamento (Comitê Comercial, Painéis com líderes, Encontros G1).</li>
+                </ul>
             </div>
 
             <footer class="slide-footer">
-                <div>Fluxo de Valor</div>
-                <div>Slide 5 de 13</div>
-            </footer>
-        </div>
-
-        <!-- Slide 6: Setores Portadores de Futuro --><div class="slide-content">
-            <header class="slide-header">
-                <!-- Logo ATUALIZADA --><img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
-                <div class="pill pill-blue">O Farol (Inteligência)</div>
-            </header>
-            
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">Setores Portadores de Futuro em Goiás</h2>
-            <p class="text-lg text-gray-700 mb-8">
-                Clique em um setor para ver o "Sinal Fraco" (tendência), o Sindicato parceiro e o insight estratégico que a ACEIC geraria para os **Top 300** daquele setor.
-            </p>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                <button class="sector-card" id="btn-alimentos" onclick="showInsight(this, 'Alimentos & Bebidas', 'SINDALIMENT / SIAEG', 'A dor não é o \'Selo\' em si, mas a *barreira de acesso* a mercados premium (Europa/Ásia) e a fundos de investimento (ESG) que exigem rastreabilidade total.')">
-                    <h3 class="text-xl font-bold text-blue-800 mb-2">Alimentos & Bebidas</h3>
-                    <p class="text-sm font-semibold text-gray-500 uppercase">VETOR: Food Tech & Rastreabilidade</p>
-                </button>
-                <button class="sector-card" id="btn-farma" onclick="showInsight(this, 'Farmacêutico & Saúde', 'SINDIFARGO', 'A próxima crise é a de *Saúde Mental*. A dor não é o \'burnout\' em si, mas o *custo do absenteísmo* e a dificuldade de reter talentos-chave (P&D, Gestão).')">
-                    <h3 class="text-xl font-bold text-blue-800 mb-2">Farmacêutico & Saúde</h3>
-                    <p class="text-sm font-semibold text-gray-500 uppercase">VETOR: Saúde Preditiva & Bioeconomia</p>
-                </button>
-                <button class="sector-card" id="btn-construcao" onclick="showInsight(this, 'Construção Civil', 'SINDUSCON-GO', 'A dor não é o \'tijolo ecológico\', mas o *acesso ao financiamento* (BNDES/Caixa) que agora exige certificação \'Green Building\' e canteiros limpos.')">
-                    <h3 class="text-xl font-bold text-blue-800 mb-2">Construção Civil</h3>
-                    <p class="text-sm font-semibold text-gray-500 uppercase">VETOR: Green Buildings & Construtech</p>
-                </button>
-                <button class="sector-card" id="btn-moda" onclick="showInsight(this, 'Vestuário & Moda', 'SINDIVEST', 'A dor não é o \'e-commerce\', mas o *\'Passaporte Digital de Produto\'* (Fashion Act da UE) que exige rastreabilidade ESG de toda a cadeia de fornecedores.')">
-                    <h3 class="text-xl font-bold text-blue-800 mb-2">Vestuário & Moda</h3>
-                    <p class="text-sm font-semibold text-gray-500 uppercase">VETOR: ESG & Digital Fashion</p>
-                </button>
-                <button class="sector-card" id="btn-auto" onclick="showInsight(this, 'Automotivo (Cadeia)', 'SINDCAPEÇAS', 'A dor não é o \'carro elétrico\' (que não fazemos), mas a *adaptação de toda a cadeia* de autopeças (plásticos, metais, borrachas) para atender às novas demandas de montadoras (ex: baterias, leveza).')">
-                    <h3 class="text-xl font-bold text-blue-800 mb-2">Automotivo (Cadeia)</h3>
-                    <p class="text-sm font-semibold text-gray-500 uppercase">VETOR: Eletrificação & Nearshoring</p>
-                </button>
-                <button class="sector-card" id="btn-mineracao" onclick="showInsight(this, 'Mineração', 'SIMINEGO', 'A dor não é o \'licenciamento ambiental\' (que já existe), mas o *acesso ao mercado de tecnologia* (Tesla, Apple) que exige \'Minerais Estratégicos de Baixo Carbono\' com rastreabilidade total.')">
-                    <h3 class="text-xl font-bold text-blue-800 mb-2">Mineração</h3>
-                    <p class="text-sm font-semibold text-gray-500 uppercase">VETOR: Minerais Estratégicos & ESG</p>
-                </button>
-            </div>
-
-            <div id="insight-display" class="hidden mt-6">
-                <p class="text-sm font-bold uppercase tracking-wider opacity-70" id="insight-sindicato"></p>
-                <p class="text-2xl font-semibold mt-2" id="insight-text"></p>
-            </div>
-
-            <footer class="slide-footer">
-                <div>Análise de Contexto</div>
-                <div>Slide 6 de 13</div>
+                <div>Escopo de Atuação</div>
+                <div>Slide 4 de 10</div>
             </footer>
         </div>
         
-        <!-- SLIDE 7: O "Farol" em Ação: Ferramentas de Foresight (ATUALIZADO) --><div class="slide-content">
+        <!-- Slide 5: Estrutura e Governança (DIAGRAMA ATUALIZADO) --><div class="slide-content">
             <header class="slide-header">
-                <!-- Logo ATUALIZADA --><img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
-                <div class="pill pill-blue">Metodologia Foresight & Conexão</div>
+                <img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
+                <div class="pill pill-blue">Governança</div>
             </header>
             
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">O "Farol" e a "Ponte": Como a ACEIC Conecta</h2>
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Estrutura de Conexão e Governança</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+                <!-- Coluna 1: Estrutura (DIAGRAMA ATUALIZADO) -->
+                <div class="md:col-span-2 bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">Fluxo de Inteligência e Colaboração</h3>
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        
+                        <div class="p-4 bg-white rounded-lg shadow border border-gray-200 w-full md:w-3/4">
+                            <span class="font-bold text-blue-800 text-lg">Superintendência FIEG</span>
+                            <p class="text-sm text-blue-700">Define a Diretriz Estratégica</p>
+                        </div>
+                        
+                        <div class="text-2xl font-bold text-gray-400">↓</div>
+                        
+                        <div class="p-6 bg-blue-100 border-2 border-blue-500 rounded-lg shadow-lg w-full md:w-3/4">
+                            <span class="font-bold text-blue-800 text-lg">ACEIP (Elo de Interlocução)</span>
+                            <p class="text-sm text-blue-700">Gera inteligência, cenários e narrativas prospectivas</p>
+                        </div>
+
+                        <div class="text-2xl font-bold text-gray-400">↔</div>
+
+                        <!-- Núcleo de Colaboração -->
+                        <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="p-3 bg-gray-100 rounded-lg shadow border">
+                                <span class="font-semibold text-gray-700">Assessoria de Comunicação (ASCOM)</span>
+                            </div>
+                            <div class="p-3 bg-gray-100 rounded-lg shadow border">
+                                <span class="font-semibold text-gray-700">Gerência de Mercado (GEREM)</span>
+                            </div>
+                            <div class="p-3 bg-gray-100 rounded-lg shadow border">
+                                <span class="font-semibold text-gray-700">Gerência Sindical</span>
+                            </div>
+                        </div>
+
+                        <div class="text-2xl font-bold text-gray-400">↓</div>
+
+                        <div class="p-4 bg-green-100 rounded-lg shadow w-full md:w-3/4">
+                            <span class="font-semibold text-green-800">Sindicatos Setoriais & Casas (SESI/SENAI/IEL)</span>
+                            <p class="text-sm text-green-700 mt-1">Executam as soluções e o atendimento em rede</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Governança (ATUALIZADA) -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Interlocutores (Ponto 4)</h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li>Superintendência (Estratégico)</li>
+                        <li>Assessoria de Comunicação</li>
+                        <li>Gerência de Relações com Mercado</li>
+                        <li><strong>Gerência Sindical</strong></li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 mt-6">Governança (Ponto 7)</h3>
+                     <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li>Relatórios mensais à Superintendência.</li>
+                        <li class="font-semibold text-blue-800">Comitê de Inteligência Estratégica (ACEIP + ASCOM + GEREM + G. Sindical).</li>
+                        <li>Capacitação contínua em foresight.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <footer class="slide-footer">
+                <div>Fluxo de Valor e Governança</div>
+                <div>Slide 5 de 10</div>
+            </footer>
+        </div>
+
+        <!-- Slide 6: Entregáveis-Chave --><div class="slide-content">
+            <header class="slide-header">
+                <img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
+                <div class="pill pill-green">Entregáveis</div>
+            </header>
+            
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Entregáveis e Produtos-Chave da ACEIP</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200 shadow-sm">
+                    <span class="pill pill-blue mb-3">Trimestral</span>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Painéis Prospectivos</h4>
+                    <p class="text-sm text-gray-600">Visualização de tendências e impactos por setor (metodologia STEEP).</p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200 shadow-sm">
+                    <span class="pill pill-blue mb-3">Semestral</span>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Cenários de Futuro da Indústria</h4>
+                    <p class="text-sm text-gray-600">Co-criação com stakeholders e equipes das Gerências.</p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200 shadow-sm">
+                    <span class="pill pill-blue mb-3">Quinzenal</span>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Boletim de Inteligência FIEG</h4>
+                    <p class="text-sm text-gray-600">Insights de mercado, sinais e benchmarking nacional.</p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200 shadow-sm">
+                    <span class="pill pill-gray mb-3">Sob Demanda</span>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Apresentações (Pitchbooks)</h4>
+                    <p class="text-sm text-gray-600">Materiais executivos para reuniões estratégicas (foco G1/G2).</p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200 shadow-sm">
+                    <span class="pill pill-blue mb-3">Mensal</span>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Mapa de Oportunidades 300+</h4>
+                    <p class="text-sm text-gray-600">Indicadores e trilhas de relacionamento com cada grupo (G1-G4).</p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200 shadow-sm">
+                    <span class="pill pill-gray mb-3">Contínuo</span>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Dashboard de Reputação</h4>
+                    <p class="text-sm text-gray-600">KPIs integrando comunicação, relacionamento e foresight.</p>
+                </div>
+            </div>
+
+            <footer class="slide-footer">
+                <div>Produtos de Inteligência (Ponto 3)</div>
+                <div>Slide 6 de 10</div>
+            </footer>
+        </div>
+
+        <!-- Slide 7: Foco 300+ G1-G4 --><div class="slide-content">
+            <header class="slide-header">
+                <img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
+                <div class="pill pill-blue">Foco Estratégico</div>
+            </header>
+            
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">O Foco da Estratégia: Os 300+ Contribuintes (G1-G4)</h2>
             <p class="text-lg text-gray-700 mb-8">
-                Foresight não é "prever o futuro". É um processo estruturado de 3 etapas para identificar, analisar e **conectar** as entidades certas para desenhar a solução.
+                A inteligência da ACEIP será aplicada de forma segmentada, alinhada à "Estratégia 300+", para maximizar o impacto em cada grupo de cliente.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Passo 1: SCAN --><div class="text-center">
-                    <div class="relative">
-                        <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-3xl font-bold mx-auto shadow-md border-2 border-blue-200">1</div>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mt-4 mb-2">1. SCAN (Explorar)</h3>
-                    <p class="text-gray-600"><strong>Ferramenta:</strong> <span class="font-semibold">Horizon Scanning</span> (Radar de Sinais).</p>
-                    <p class="text-gray-600 mt-2">Monitoramos Sinais Fracos no Observatório, leis e mercado para responder: <strong>"O que está mudando no mundo?"</strong></p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-blue-100 p-5 rounded-lg border border-blue-300 text-center">
+                    <h3 class="text-2xl font-bold text-blue-900">G1</h3>
+                    <p class="font-semibold text-blue-800">Top Contribuintes</p>
+                    <p class="text-sm text-blue-700 mt-2"><strong>Ação ACEIP:</strong> Ativação Estratégica.</p>
+                    <p class="text-sm text-blue-600 mt-1"><strong>Entregável:</strong> Cenários de Futuro, Pitches G1, Reuniões "Indústria do Futuro".</p>
                 </div>
-                
-                <!-- Passo 2: ANALYZE --><div class="text-center">
-                    <div class="relative">
-                        <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-3xl font-bold mx-auto shadow-md border-2 border-blue-200">2</div>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mt-4 mb-2">2. ANALYZE (Analisar)</h3>
-                    <p class="text-gray-600"><strong>Ferramenta:</strong> <span class="font-semibold">Roda do Futuro</span> (Análise de Impacto).</p>
-                    <p class="text-gray-600 mt-2">Analisamos o impacto de um sinal (ex: "Lei do Carbono") para responder: <strong>"O que isso significa para o SINDUSCON? E para o Top 300 de Alimentos?"</strong></p>
+                <div class="bg-green-100 p-5 rounded-lg border border-green-300 text-center">
+                    <h3 class="text-2xl font-bold text-green-900">G2</h3>
+                    <p class="font-semibold text-green-800">Alto Potencial (Cross-sell)</p>
+                    <p class="text-sm text-green-700 mt-2"><strong>Ação ACEIP:</strong> Expansão e Cross-sell.</p>
+                    <p class="text-sm text-green-600 mt-1"><strong>Entregável:</strong> Mapa de Oportunidades 300+, Relatórios de Impacto G2.</p>
                 </div>
-
-                <!-- Passo 3: DESIGN (ATUALIZADO) --><div class="text-center">
-                    <div class="relative">
-                        <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-3xl font-bold mx-auto shadow-md border-2 border-blue-200">3</div>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mt-4 mb-2">3. COLABORAR (Conectar)</h3>
-                    <p class="text-gray-600"><strong>Ferramenta:</strong> <span class="font-semibold">Estratégias Colaborativas</span>.</p>
-                    <p class="text-gray-600 mt-2">Conectamos **Sindicatos, Mercado (GEREM) e Comunicação (ASCOM)** para desenhar a solução em rede, respondendo: <strong>"Como o Sistema FIEG atuará em conjunto?"</strong></p>
+                <div class="bg-yellow-100 p-5 rounded-lg border border-yellow-300 text-center">
+                    <h3 class="text-2xl font-bold text-yellow-900">G3</h3>
+                    <p class="font-semibold text-yellow-800">Recorrentes (Retenção)</p>
+                    <p class="text-sm text-yellow-700 mt-2"><strong>Ação ACEIP:</strong> Retenção e Geração de Valor.</p>
+                    <p class="text-sm text-yellow-600 mt-1"><strong>Entregável:</strong> Dashboard de Reputação (NPS), Boletins de Inteligência.</p>
+                </div>
+                 <div class="bg-gray-100 p-5 rounded-lg border border-gray-300 text-center">
+                    <h3 class="text-2xl font-bold text-gray-900">G4</h3>
+                    <p class="font-semibold text-gray-800">Inativos / Baixo Potencial</p>
+                    <p class="text-sm text-gray-700 mt-2"><strong>Ação ACEIP:</strong> Prospecção Inteligente.</p>
+                    <p class="text-sm text-gray-600 mt-1"><strong>Entregável:</strong> Briefings para GEREM com "iscas" de valor (baseado em tendências).</p>
                 </div>
             </div>
 
             <footer class="slide-footer">
-                <div>A Caixa de Ferramentas de Conexão</div>
-                <div>Slide 7 de 13</div>
-            </footer>
-        </div>
-        
-        <!-- SLIDE 8: O Portfólio Juntos Pela Indústria --><div class="slide-content">
-            <header class="slide-header">
-                <!-- Logo ATUALIZADA --><img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
-                <div class="pill pill-green">O Arsenal</div>
-            </header>
-            
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">O Arsenal da ACEIC: O Portfólio "Juntos Pela Indústria"</h2>
-            <p class="text-lg text-gray-700 mb-8">
-                A ACEIC não cria produtos do zero, ela age como um "arquiteto de soluções", **conectando** os programas de sucesso das entidades para resolver as dores estratégicas dos Top 300.
-            </p>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
-                    <h4 class="text-lg font-bold text-blue-800 mb-2">1. Produtividade & Lean</h4>
-                    <p class="text-sm text-gray-600"><strong>Programas:</strong> Brasil Mais Produtivo (B+P), Programa Indústria Mais Competitiva (PIC).</p>
-                </div>
-                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
-                    <h4 class="text-lg font-bold text-blue-800 mb-2">2. Digital & Inovação</h4>
-                    <p class="text-sm text-gray-600"><strong>Programas:</strong> Inove+Digital (IEL), Edital Regional de Inovação (SENAI/SEBRAE), PIC (Automação/IA).</p>
-                </div>
-                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
-                    <h4 class="text-lg font-bold text-blue-800 mb-2">3. Sustentabilidade & Energia</h4>
-                    <p class="text-sm text-gray-600"><strong>Programas:</strong> Sebrae Energia, B+P (Eficiência Energética), PIC (Sustentabilidade).</p>
-                </div>
-                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
-                    <h4 class="text-lg font-bold text-blue-800 mb-2">4. Qualidade & Certificação</h4>
-                    <p class="text-sm text-gray-600"><strong>Programas:</strong> Selo Alimento Confiável (SENAI), Metrologia (ISTs), Normatização (PIC).</p>
-                </div>
-                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
-                    <h4 class="text-lg font-bold text-blue-800 mb-2">5. Gestão & Acesso a Mercado</h4>
-                    <p class="text-sm text-gray-600"><strong>Programas:</strong> Conexão Financeira (SEBRAE/NAC), MOVE+ (Vendas), Missões Empresariais, Goiás Original.</p>
-                </div>
-                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
-                    <h4 class="text-lg font-bold text-blue-800 mb-2">6. Saúde & Liderança</h4>
-                    <p class="text-sm text-gray-600"><strong>Programas:</strong> Gestão de Saúde e SST (SESI), Programas de Liderança (IEL), Gestão de Pessoas (SEBRAE).</p>
-                </div>
-            </div>
-
-            <footer class="slide-footer">
-                <div>Caixa de Ferramentas Estratégicas</div>
-                <div>Slide 8 de 13</div>
-            </footer>
-        </div>
-        
-        <!-- Slide 9: Exemplo Prático (Interativo) --><div class="slide-content" id="slide9">
-            <header class="slide-header">
-                <!-- Logo ATUALIZADA --><img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
-                <div class="pill pill-green">Exemplo Prático #1</div>
-            </header>
-
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">Exemplo Prático #1: A Oportunidade da "Indústria Verde"</h2>
-            <p class="text-lg text-gray-700 mb-8">
-                Como a ACEIC transformaria um desafio (Transição Energética) em uma receita integrada para um cliente **Top 300**?
-            </p>
-
-            <!-- Abas Interativas --><div class="flex space-x-2 border-b border-gray-300 mb-6">
-                <button class="tab-btn active" onclick="openTab(event, 'tab1')">1. O Farol (Foresight)</button>
-                <button class="tab-btn" onclick="openTab(event, 'tab2')">2. A Ponte (BI & Conexão)</button>
-                <button class="tab-btn" onclick="openTab(event, 'tab3')">3. A Ação (Estratégia)</button>
-                <button class="tab-btn" onclick="openTab(event, 'tab4')">4. O Resultado</button>
-            </div>
-
-            <!-- Conteúdo das Abas --><div id="tab1" class="tab-content active bg-gray-50 p-6 rounded-lg border">
-                <h3 class="text-xl font-bold text-gray-900 mb-3">1. O Farol (Foresight): Identificando o Sinal</h3>
-                <p class="text-gray-700">
-                    A ACEIC (Observatório) detecta: "ESG" e "Eficiência Energética" estão se tornando barreiras de acesso a crédito (BNDES) e a mercados internacionais (taxação de carbono).
-                </p>
-                <p class="text-gray-700 mt-3">
-                    <strong>Conclusão do Foresight:</strong> A indústria (especialmente os Top 300) precisará de *comprovação* de sustentabilidade para manter sua competitividade.
-                </p>
-            </div>
-
-            <div id="tab2" class="tab-content bg-gray-50 p-6 rounded-lg border">
-                <h3 class="text-xl font-bold text-gray-900 mb-3">2. A Ponte (BI & Conexão): Mapeando Ativos Internos</h3>
-                <p class="text-gray-700">
-                    A ACEIC cruza essa tendência com as competências do portfólio **Juntos Pela Indústria**:
-                </p>
-                <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
-                    <li><strong>SENAI (ISTs):</strong> Expertise técnica (<strong>B+P Eficiência Energética</strong>, <strong>PIC Sustentabilidade</strong>).</li>
-                    <li><strong>IEL:</strong> Domínio da <strong>Transformação Digital</strong> (Programa <strong>Inove + Digital</strong>).</li>
-                    <li><strong>FIEG/SEBRAE:</strong> Articulação e <strong>Acesso ao Crédito</strong> (NAC / <strong>Conexão Financeira</strong>).</li>
-                    <li><strong>SESI:</strong> Expertise em <strong>Saúde e Segurança (SST)</strong>, pilar fundamental do "S" do ESG.</li>
-                </ul>
-                <p class="text-gray-700 mt-3">
-                    <strong>Insight da Inteligência:</strong> Estamos vendendo produtos isolados, quando poderíamos estar vendendo uma *solução estratégica de alto valor* (Selo ESG) para nossos Top 300.
-                </p>
-            </div>
-            
-            <div id="tab3" class="tab-content bg-gray-50 p-6 rounded-lg border">
-                <h3 class="text-xl font-bold text-gray-900 mb-3">3. A Ação (Proposta Estratégica da ACEIC)</h3>
-                <p class="text-gray-700">
-                    A ACEIC desenha um novo *produto integrado* para um cliente Top 300: o <strong>"Pacote FIEG Indústria Verde 4.0"</strong>.
-                </p>
-                <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
-                    <li><strong>ACEIC + Sindicato:</strong> Valida o Selo e mobiliza o setor.</li>
-                    <li><strong>SENAI + ISTs:</strong> Fazem a consultoria (<strong>B+P Eficiência Energética</strong>) e descarbonização (o "E" do ESG).</li>
-                    <li><strong>SESI:</strong> Entra com o diagnóstico e plano de ação de <strong>SST</strong> (o "S" do ESG).</li>
-                    <li><strong>ACEIC/FIEG:</strong> Cria um "Selo de Conformidade Verde" do Sistema FIEG.</li>
-                    <li><strong>FIEG (NAC):</strong> Leva as empresas com esse Selo para o <strong>Programa Conexão Financeira</strong>.</li>
-                </ul>
-            </div>
-            
-            <div id="tab4" class="tab-content bg-gray-50 p-6 rounded-lg border">
-                <h3 class="text-xl font-bold text-gray-900 mb-3">4. O Resultado (Valor Gerado)</h3>
-                <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
-                    <li><strong>Para a Indústria (Top 300):</strong> Uma solução "one-stop-shop" que resolve um problema técnico (energia), de saúde (SST) e financeiro (crédito) de uma vez.</li>
-                    <li><strong>Para a GEREM (Mercado):</strong> Um produto de altíssimo valor agregado para vender, com um argumento irrefutável (acesso a crédito).</li>
-                    <li><strong>Para a ASCOM (Com.):</strong> Uma pauta positiva e concreta de "Pioneirismo em ESG".</li>
-                    <li><strong>Para o Sistema FIEG:</strong> Aumento do *Share of Wallet* no cliente Top 300, fidelização e cumprimento da missão estratégica.</li>
-                </ul>
-            </div>
-
-            <footer class="slide-footer">
-                <div>Inteligência em Ação</div>
-                <div>Slide 9 de 13</div>
+                <div>Inteligência Aplicada (Ponto 2, 3)</div>
+                <div>Slide 7 de 10</div>
             </footer>
         </div>
 
-        <!-- Slide 10: Exemplo Prático #2 --><div class="slide-content" id="slide10">
+        <!-- Slide 8: KPIs --><div class="slide-content">
             <header class="slide-header">
-                <!-- Logo ATUALIZADA --><img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
-                <div class="pill pill-green">Exemplo Prático #2</div>
-            </header>
-
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">Exemplo Prático #2: O "Passaporte para Exportação"</h2>
-            <p class="text-lg text-gray-700 mb-8">
-                Como a ACEIC transforma um selo técnico (IST) e uma consultoria (CIN) em uma nova linha de receita premium para um cliente **Top 300**?
-            </p>
-
-            <!-- Abas Interativas (Conjunto 2) --><div class="flex space-x-2 border-b border-gray-300 mb-6">
-                <button class="tab-btn-p2 tab-btn active" onclick="openTab2(event, 'p2-tab1')">1. O Farol (Foresight)</button>
-                <button class="tab-btn-p2 tab-btn" onclick="openTab2(event, 'p2-tab2')">2. A Ponte (BI & Conexão)</button>
-                <button class="tab-btn-p2 tab-btn" onclick="openTab2(event, 'p2-tab3')">3. A Ação (Estratégia)</button>
-                <button class="tab-btn-p2 tab-btn" onclick="openTab2(event, 'p2-tab4')">4. O Resultado</button>
-            </div>
-
-            <!-- Conteúdo das Abas (Conjunto 2) --><div id="p2-tab1" class="tab-content-p2 tab-content active bg-gray-50 p-6 rounded-lg border">
-                <h3 class="text-xl font-bold text-gray-900 mb-3">1. O Farol (Foresight): Identificando a Barreira</h3>
-                <p class="text-gray-700">
-                    A ACEIC detecta (via Observatório/CIN) que mercados premium (Europa, Ásia) aumentam as barreiras não-tarifárias para alimentos. A dor da indústria (Top 300 de Alimentos) não é "como exportar", mas "como *comprovar* a qualidade exigida para exportar".
-                </p>
-                <p class="text-gray-700 mt-3">
-                    <strong>Conclusão do Foresight:</strong> A exportação de alimentos tornou-se um jogo de *certificação e rastreabilidade*.
-                </p>
-            </div>
-
-            <div id="p2-tab2" class="tab-content-p2 tab-content bg-gray-50 p-6 rounded-lg border">
-                <h3 class="text-xl font-bold text-gray-900 mb-3">2. A Ponte (BI & Conexão): Conectando Ativos Únicos (JPI)</h3>
-                <p class="text-gray-700">
-                    A ACEIC mapeia os ativos do portfólio **Juntos Pela Indústria** que respondem a essa dor:
-                </p>
-                <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
-                    <li><strong>Ativo FIEG (CIN):</strong> Inteligência de mercado e contatos de compradores.</li>
-                    <li><strong>Ativo SENAI (IST Alimentos):</strong> A "chave técnica" — o <strong>Selo Alimento Confiável</strong>.</li>
-                    <li><strong>Ativo IEL:</strong> Expertise no <strong>Programa Inove+Digital</strong> para implementar a rastreabilidade.</li>
-                    <li><strong>Ativo SEBRAE:</strong> Programas de acesso a mercado como <strong>Missões Empresariais</strong> e <strong>Goiás Original</strong> (branding).</li>
-                </ul>
-                <p class="text-gray-700 mt-3">
-                    <strong>Insight da Inteligência:</strong> Temos a *consultoria de acesso* (CIN) e a *chave técnica* (Selo IST), mas as vendemos separadamente. O valor da consultoria CIN dispara se ela vier atrelada à *garantia* de conformidade.
-                </p>
-            </div>
-            
-            <div id="p2-tab3" class="tab-content-p2 tab-content bg-gray-50 p-6 rounded-lg border">
-                <h3 class="text-xl font-bold text-gray-900 mb-3">3. A Ação (Proposta Estratégica da ACEIC)</h3>
-                <p class="text-gray-700">
-                    A ACEIC propõe o <strong>"Passaporte FIEG para Exportação de Alimentos"</strong> para os Top 300 do setor.
-                </p>
-                <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
-                    <li><strong>ACEIC + SINDALIMENT:</strong> Co-cria a demanda pelo "Passaporte" com os associados-chave.</li>
-                    <li><strong>Etapa 1 (SENAI/IEL):</strong> O IST Alimentos implementa o <strong>Selo Alimento Confiável</strong> + IEL implementa a rastreabilidade via <strong>Inove+Digital</strong>.</li>
-                    <li><strong>Etapa 2 (FIEG/SEBRAE):</strong> A consultoria do CIN e o <strong>Goiás Original</strong> usam o "Pacote de Conformidade FIEG" como argumento de prospecção em <strong>Missões Empresariais</strong>.</li>
-                </ul>
-            </div>
-            
-            <div id="p2-tab4" class="tab-content-p2 tab-content bg-gray-50 p-6 rounded-lg border">
-                <h3 class="text-xl font-bold text-gray-900 mb-3">4. O Resultado (Valor Gerado)</h3>
-                <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
-                    <li><strong>Para a Indústria (Top 300):</strong> Uma solução "one-stop-shop" que não só a certifica, mas *abre um novo mercado* e justifica o investimento (sem subsídio).</li>
-                    <li><strong>Para a GEREM (Mercado):</strong> Vende um pacote premium (Selo + Rastreabilidade + Consultoria CIN) com ROI claro.</li>
-                    <li><strong>Para o Sistema FIEG:</strong> Cria uma nova linha de receita de alto valor, 100% interna, e blinda a relação com o cliente Top 300.</li>
-                </ul>
-            </div>
-
-            <footer class="slide-footer">
-                <div>Inteligência em Ação</div>
-                <div>Slide 10 de 13</div>
-            </footer>
-        </div>
-
-        <!-- Slide 11: Simulador Interativo ACEIC (JPI) (Termo "Reset-Go" substituído) --><div class="slide-content" id="slide11">
-            <header class="slide-header">
-                <!-- Logo ATUALIZADA --><img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
-                <div class="pill pill-blue">Simulador ACEIC-JPI</div>
-            </header>
-            
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">Simulador ACEIC: Da Dor à Conexão (JPI)</h2>
-            <p class="text-lg text-gray-700 mb-4">
-                Selecione um setor e veja como a ACEIC (via **Diagnóstico Colaborativo**) diagnostica a *dor estratégica* de um cliente Top 300 e monta uma solução em rede com o portfólio **Juntos Pela Indústria**.
-            </p>
-
-            <!-- Seletor de Setor --><div class="mb-6">
-                <label for="sector-select-2" class="block text-sm font-medium text-gray-700 mb-2">Selecione o Setor para Simulação:</label>
-                <select id="sector-select-2" onchange="changeSector2()" class="w-full md:w-1/2 p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <option value="moda">Vestuário & Moda (Foco: Escala Digital)</option>
-                    <option value="farma">Farmacêutico (Foco: Saúde Mental Corp.)</option>
-                </select>
-            </div>
-
-            <!-- Contêiner do Simulador (Termo "Reset-Go" substituído) --><div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
-
-                <!-- Caminho 1: Vestuário & Moda --><div id="path-moda" class="sim-path active">
-                    <!-- Passo 1: O Sinal --><div id="sim-step-moda-1" class="sim-step active">
-                        <h4 class="text-xl font-bold text-blue-800 mb-3">PASSO 1: O SINAL (Técnica: Horizon Scanning)</h4>
-                        <p class="text-gray-700 mb-2">A ACEIC (Observatório) detecta um "Sinal Fraco" para o setor de <strong>Vestuário & Moda</strong>:</p>
-                        <p class="text-gray-800 font-medium bg-white p-3 rounded-md shadow-sm border-l-4 border-blue-500">
-                            "Varejistas (Renner, C&A) e *Fashion Acts* (UE) exigem rastreabilidade digital (Passaporte de Produto) e social (SST) de toda a cadeia de fornecedores."
-                        </p>
-                        <button class="tab-btn active mt-5" onclick="runSimulator2('moda', 2)">Analisar Consequências (Roda do Futuro) →</button>
-                    </div>
-                    <!-- Passo 2: A Análise --><div id="sim-step-moda-2" class="sim-step">
-                        <h4 class="text-xl font-bold text-blue-800 mb-3">PASSO 2: A ANÁLISE (Técnica: Roda do Futuro)</h4>
-                        <p class="text-gray-700 mb-2">A ACEIC analisa as consequências para um cliente <strong>Top 300</strong> (grande confecção):</p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
-                            <li><strong>Problema Estratégico:</strong> O cliente será bloqueado de vender para grandes varejistas e de exportar (B2B) se não tiver rastreabilidade digital e social.</li>
-                            <li><strong>Oportunidade:</strong> Criar a "Cadeia Têxtil Digital e Sustentável de Goiás".</li>
-                        </ul>
-                        <button class="tab-btn active mt-5" onclick="runSimulator2('moda', 3)">Iniciar Diagnóstico Colaborativo →</button>
-                    </div>
-                    <!-- Passo 3: O Diagnóstico (Colaborativo) --><div id="sim-step-moda-3" class="sim-step">
-                        <h4 class="text-xl font-bold text-yellow-800 mb-3">PASSO 3: DIAGNÓSTICO (Estratégia Colaborativa)</h4>
-                        <p class="text-gray-700 mb-2">A ACEIC, em <strong>colaboração</strong> com o <strong>SINDIVEST</strong>, <strong>GEREM</strong> e <strong>ASCOM</strong>, inicia o diagnóstico no cliente Top 300:</p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
-                            <li><strong>Diagnóstico (Silos):</strong> O cliente sabe da lei (via CIN) e comprou um curso de E-commerce (IEL), mas não tem a *tecnologia* (rastreabilidade) nem a *certificação social* (SST) exigidas.</li>
-                            <li><strong>Plano Colaborativo (Rede):</strong> O plano exige uma solução que integre a produção limpa (SENAI), o trabalho justo (SESI) e a tecnologia de rastreio (IEL).</li>
-                        </ul>
-                        <p class="text-yellow-900 font-semibold bg-yellow-50 p-3 rounded-md border-l-4 border-yellow-500 mt-4">
-                            <strong>Resultado da Colaboração:</strong> A dor real é a *implementação tecnológica* de uma exigência *social* e de *mercado*.
-                        </p>
-                        <button class="tab-btn active mt-5" onclick="runSimulator2('moda', 4)">Ver Solução "Juntos Pela Indústria" →</button>
-                    </div>
-                    <!-- Passo 4: A Solução em Rede (ACEIC) --><div id="sim-step-moda-4" class="sim-step">
-                        <h4 class="text-xl font-bold text-green-800 mb-3">PASSO 4: A CONEXÃO (Atendimento em Rede via ACEIC)</h4>
-                        <p class="text-gray-700 mb-2">Com base no diagnóstico, a ACEIC (FIEG) desenha o <strong>"Selo FIEG de Rastreabilidade Têxtil"</strong>:</p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
-                            <li><strong>ACEIC + SINDIVEST (Conexão Estratégica):</strong> Articula com o Sindicato e grandes compradores (varejistas).</li>
-                            <li><strong>IEL (Conexão Digital):</strong> Lidera com o <strong>Inove+Digital</strong>, implementando a plataforma de rastreabilidade (Blockchain/QR Code).</li>
-                            <li><strong>SENAI (Conexão Técnica):</strong> Audita a "produção limpa" (químicos, água) via <strong>B+P (Eficiência Energética)</strong>.</li>
-                            <li><strong>SESI (Conexão Humana):</strong> Audita o "S" (Social), garantindo "trabalho justo" na cadeia.</li>
-                            <li><strong>FIEG (CIN) / SEBRAE (MOVE+):</strong> Usa o "Selo" para (re)abrir o mercado da UE/EUA para o cliente.</li>
-                        </ul>
-                        <button class="tab-btn active mt-5" onclick="runSimulator2('moda', 5)">Ver Resultado Final →</button>
-                    </div>
-                    <!-- Passo 5: O Resultado --><div id="sim-step-moda-5" class="sim-step">
-                        <h4 class="text-xl font-bold text-gray-900 mb-3">PASSO 5: O RESULTADO ESTRATÉGICO</h4>
-                        <p class="text-gray-900 font-semibold bg-green-50 p-3 rounded-md border-l-4 border-green-500 mt-4">
-                            O cliente (Top 300) não compra um curso, ele compra <strong>acesso ao mercado internacional e aos grandes varejistas</strong>. A GEREM vende um pacote de adequação ESG de alto valor.
-                        </p>
-                        <button class="tab-btn active mt-5" onclick="runSimulator2('moda', 1)">Reiniciar Simulação</button>
-                    </div>
-                </div>
-                
-                <!-- Caminho 2: Farmacêutico --><div id="path-farma" class="sim-path">
-                    <!-- Passo 1: O Sinal --><div id="sim-step-farma-1" class="sim-step active">
-                        <h4 class="text-xl font-bold text-blue-800 mb-3">PASSO 1: O SINAL (Técnica: Horizon Scanning)</h4>
-                        <p class="text-gray-700 mb-2">A ACEIC (Observatório) detecta um "Sinal Fraco" para o setor <strong>Farmacêutico</strong>:</p>
-                        <p class="text-gray-800 font-medium bg-white p-3 rounded-md shadow-sm border-l-4 border-blue-500">
-                            "OMS declara 'Saúde Mental' como a próxima crise de saúde global. Aumento da regulação do MTE sobre prevenção ao 'burnout'."
-                        </p>
-                        <button class="tab-btn active mt-5" onclick="runSimulator2('farma', 2)">Analisar Consequências (Roda do Futuro) →</button>
-                    </div>
-                    <!-- Passo 2: A Análise --><div id="sim-step-farma-2" class="sim-step">
-                        <h4 class="text-xl font-bold text-blue-800 mb-3">PASSO 2: A ANÁLISE (Técnica: Roda do Futuro)</h4>
-                        <p class="text-gray-700 mb-2">A ACEIC analisa as consequências para um cliente <strong>Top 300</strong> (um grande laboratório):</p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
-                            <li><strong>Problema Estratégico:</strong> Aumento do absenteísmo e alta rotatividade de talentos-chave (P&D, Gestão), gerando passivos trabalhistas.</li>
-                            <li><strong>Oportunidade:</strong> Criar um "Selo de Ambiente de Trabalho Saudável e Produtivo".</li>
-                        </ul>
-                        <button class="tab-btn active mt-5" onclick="runSimulator2('farma', 3)">Iniciar Diagnóstico Colaborativo →</button>
-                    </div>
-                    <!-- Passo 3: O Diagnóstico (Colaborativo) --><div id="sim-step-farma-3" class="sim-step">
-                        <h4 class="text-xl font-bold text-yellow-800 mb-3">PASSO 3: DIAGNÓSTICO (Estratégia Colaborativa)</h4>
-                        <p class="text-gray-700 mb-2">A ACEIC, em <strong>colaboração</strong> com o <strong>SINDIFARGO</strong>, <strong>GEREM</strong> e <strong>ASCOM</strong>, inicia o diagnóstico no cliente Top 300:</p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
-                            <li><strong>Diagnóstico (Silos):</strong> O cliente compra "saúde" (Ginástica Laboral do SESI) e "gestão" (Curso de Liderança do IEL) separadamente.</li>
-                            <li><strong>Plano Colaborativo (Rede):</strong> O plano revela que o *burnout* é causado pela *sobrecarga de processos* (ineficiência) e não apenas por "falta de liderança".</li>
-                        </ul>
-                        <p class="text-yellow-900 font-semibold bg-yellow-50 p-3 rounded-md border-l-4 border-yellow-500 mt-4">
-                            <strong>Resultado da Colaboração:</strong> A dor real é a *ineficiência de processos* (domínio do SENAI) que causa o *problema de saúde* (domínio do SESI).
-                        </p>
-                        <button class="tab-btn active mt-5" onclick="runSimulator2('farma', 4)">Ver Solução "Juntos Pela Indústria" →</button>
-                    </div>
-                    <!-- Passo 4: A Solução em Rede (ACEIC) --><div id="sim-step-farma-4" class="sim-step">
-                        <h4 class="text-xl font-bold text-green-800 mb-3">PASSO 4: A CONEXÃO (Atendimento em Rede via ACEIC)</h4>
-                        <p class="text-gray-700 mb-2">Com base no diagnóstico, a ACEIC (FIEG) desenha o <strong>"Programa FIEG de Saúde Integral e Produtividade"</strong>:</p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3 pl-4">
-                            <li><strong>ACEIC + SINDIFARGO (Conexão Estratégica):</strong> Valida o programa com o Sindicato e o MTE.</li>
-                            <li><strong>SESI (Conexão Humana):</strong> Implementa a <strong>Plataforma de Gestão de Saúde Mental</strong> (telepsicologia, analytics de absenteísmo).</li>
-                            <li><strong>SENAI (Conexão Técnica):</strong> Entra com <strong>B+P (Manufatura Enxuta)</strong> para identificar e eliminar a *sobrecarga* (a *causa* do estresse).</li>
-                            <li><strong>IEL (Conexão de Gestão):</strong> Aplica "Treinamento de Liderança Humanizada" focado na nova cultura.</li>
-                        </ul>
-                        <button class="tab-btn active mt-5" onclick="runSimulator2('farma', 5)">Ver Resultado Final →</button>
-                    </div>
-                    <!-- Passo 5: O Resultado --><div id="sim-step-farma-5" class="sim-step">
-                        <h4 class="text-xl font-bold text-gray-900 mb-3">PASSO 5: O RESULTADO ESTRATÉGICO</h4>
-                        <p class="text-gray-900 font-semibold bg-green-50 p-3 rounded-md border-l-4 border-green-500 mt-4">
-                            O cliente (Top 300) não compra um curso, ele compra <strong>redução de absenteísmo</strong> e <strong>retenção de talentos</strong>. A GEREM vende um pacote de assinatura (SaaS + Consultoria) de alto valor.
-                        </p>
-                        <button class="tab-btn active mt-5" onclick="runSimulator2('farma', 1)">Reiniciar Simulação</button>
-                    </div>
-                </div>
-            </div>
-
-            <footer class="slide-footer">
-                <div>Inteligência em Ação</div>
-                <div>Slide 11 de 13</div>
-            </footer>
-        </div>
-
-        <!-- Slide 12: Dashboards e Indicadores Estratégicos (ATUALIZADO) --><div class="slide-content">
-            <header class="slide-header">
-                <!-- Logo ATUALIZADA --><img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
+                <img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
                 <div class="pill pill-gray">Medição</div>
             </header>
             
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">Indicadores Estratégicos (Foco: Top 300)</h2>
-            <p class="text-lg text-gray-700 mb-8">
-                A ACEIC não será medida por vendas, mas pela capacidade de *blindar e expandir* nossos clientes mais estratégicos.
-            </p>
-
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Medindo o Sucesso: KPIs da ACEIP</h2>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- KPI 1: Share Receita 300+ --><div class="bg-gray-50 p-5 rounded-lg border border-gray-200 text-center shadow-sm">
-                    <div class="text-4xl font-bold text-blue-700 mb-2">Sr 300+</div>
-                    <h4 class="text-md font-semibold text-gray-800 mb-2">Share Receita 300+</h4>
-                    <p class="text-sm text-gray-600">% em receita de Serviços vindas através do relacionamento comercial dos 300 maiores contribuintes do Sistema FIEG.</p>
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200 text-center shadow-sm">
+                    <div class="text-4xl font-bold text-blue-700 mb-2">🤝</div>
+                    <h4 class="text-md font-semibold text-gray-800 mb-2">Relacionamento</h4>
+                    <p class="text-sm text-gray-600">Frequência de interações (G1/G2), tempo médio de resposta, NPS por grupo.</p>
                 </div>
-                <!-- KPI 2: Ticket Médio 300+ --><div class="bg-gray-50 p-5 rounded-lg border border-gray-200 text-center shadow-sm">
-                    <div class="text-4xl font-bold text-blue-700 mb-2">T$ 300+</div>
-                    <h4 class="text-md font-semibold text-gray-800 mb-2">Ticket Médio 300+</h4>
-                    <p class="text-sm text-gray-600">Valor Médio de Serviços Contratados pelos 300 maiores contribuintes do Sistema FIEG.</p>
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200 text-center shadow-sm">
+                    <div class="text-4xl font-bold text-blue-700 mb-2">🔮</div>
+                    <h4 class="text-md font-semibold text-gray-800 mb-2">Inteligência</h4>
+                    <p class="text-sm text-gray-600">Nº de cenários produzidos, relatórios entregues, sinais de futuro identificados.</p>
                 </div>
-                <!-- KPI 3: Share Vendas 300+ --><div class="bg-gray-50 p-5 rounded-lg border border-gray-200 text-center shadow-sm">
-                    <div class="text-4xl font-bold text-blue-700 mb-2">Sv 300+</div>
-                    <h4 class="text-md font-semibold text-gray-800 mb-2">Share Vendas 300+</h4>
-                    <p class="text-sm text-gray-600">% CNPJS dentre os 300 maiores Contribuintes com contratação de Serviços do Sistema FIEG.</p>
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200 text-center shadow-sm">
+                    <div class="text-4xl font-bold text-blue-700 mb-2">📣</div>
+                    <h4 class="text-md font-semibold text-gray-800 mb-2">Comunicação</h4>
+                    <p class="text-sm text-gray-600">Alcance das narrativas, engajamento de stakeholders, repercussão institucional.</p>
                 </div>
-                <!-- KPI 4: NPS 300+ --><div class="bg-gray-50 p-5 rounded-lg border border-gray-200 text-center shadow-sm">
-                    <div class="text-4xl font-bold text-blue-700 mb-2">NPS 300+</div>
-                    <h4 class="text-md font-semibold text-gray-800 mb-2">NPS 300+</h4>
-                    <p class="text-sm text-gray-600">Índice NPS dos atendimentos realizados com os 300 maiores contribuintes do Sistema Fieg.</p>
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200 text-center shadow-sm">
+                    <div class="text-4xl font-bold text-blue-700 mb-2">💡</div>
+                    <h4 class="text-md font-semibold text-gray-800 mb-2">Valor (Conversão)</h4>
+                    <p class="text-sm text-gray-600">Oportunidades mapeadas convertidas em ações concretas no portfólio (SESI/SENAI/IEL).</p>
                 </div>
             </div>
 
             <footer class="slide-footer">
-                <div>Dashboards Estratégicos</div>
-                <div>Slide 12 de 13</div>
+                <div>Dashboards Estratégicos (Ponto 5)</div>
+                <div>Slide 8 de 10</div>
             </footer>
         </div>
 
-        <!-- Slide 13: Conclusão (Termo "Reset-Go" substituído) --><div class="slide-content bg-gray-100 text-gray-800">
+        <!-- Slide 9: Plano de Implantação --><div class="slide-content">
+            <header class="slide-header">
+                <img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
+                <div class="pill pill-blue">Roadmap</div>
+            </header>
+            
+            <h2 class="text-3xl font-bold text-gray-800 mb-10">Etapas de Implantação (Roadmap 120 Dias)</h2>
+            
+            <div class="relative w-full px-4">
+                <!-- A Linha do Tempo -->
+                <div class="absolute left-0 right-0 top-1/2 h-1 bg-gray-300 -translate-y-1/2"></div>
+                
+                <!-- Container dos Passos -->
+                <div class="flex justify-between text-center">
+                    
+                    <!-- Passo 1: 30 dias -->
+                    <div class="relative z-10 w-1/5">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto text-xl font-bold border-4 border-white shadow-lg">1</div>
+                        <h4 class="text-lg font-semibold text-gray-800 mt-3">Design da Assessoria</h4>
+                        <p class="text-sm text-gray-600">30 Dias</p>
+                    </div>
+                    
+                    <!-- Passo 2: 45 dias -->
+                    <div class="relative z-10 w-1/5">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto text-xl font-bold border-4 border-white shadow-lg">2</div>
+                        <h4 class="text-lg font-semibold text-gray-800 mt-3">Mapeamento de Dados</h4>
+                        <p class="text-sm text-gray-600">45 Dias</p>
+                    </div>
+                    
+                    <!-- Passo 3: 60 dias -->
+                    <div class="relative z-10 w-1/5">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto text-xl font-bold border-4 border-white shadow-lg">3</div>
+                        <h4 class="text-lg font-semibold text-gray-800 mt-3">Piloto G1/G2 (Painéis)</h4>
+                        <p class="text-sm text-gray-600">60 Dias</p>
+                    </div>
+                    
+                    <!-- Passo 4: 90 dias -->
+                    <div class="relative z-10 w-1/5">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto text-xl font-bold border-4 border-white shadow-lg">4</div>
+                        <h4 class="text-lg font-semibold text-gray-800 mt-3">Lançamento Institucional</h4>
+                        <p class="text-sm text-gray-600">90 Dias</p>
+                    </div>
+                    
+                    <!-- Passo 5: 120 dias -->
+                    <div class="relative z-10 w-1/5">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto text-xl font-bold border-4 border-white shadow-lg">5</div>
+                        <h4 class="text-lg font-semibold text-gray-800 mt-3">Consolidação (G3/G4)</h4>
+                        <p class="text-sm text-gray-600">120 Dias</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <footer class="slide-footer">
+                <div>Plano de Ação (Ponto 6)</div>
+                <div>Slide 9 de 10</div>
+            </footer>
+        </div>
+
+        <!-- Slide 10: Conclusão --><div class="slide-content bg-gray-100 text-gray-800">
             <header class="slide-header border-gray-300">
-                <!-- Logo ATUALIZADA --><img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
+                <img src="https://i.postimg.cc/4yFwJkvQ/SELO-FIEG-75-ANOS-COLOR.png" alt="Selo FIEG 75 Anos" class="fieg-logo-img">
                 <div class="pill pill-green">Decisão</div>
             </header>
             
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">O Custo da Inação vs. O Valor da Integração</h2>
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Valor Estratégico: O Próximo Nível do Sistema</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
                 <div class="bg-red-100 p-6 rounded-lg text-red-900 border border-red-200">
                     <h3 class="text-2xl font-bold mb-3">O Custo de Não Agir</h3>
                     <p>
-                        Continuaremos com vendas pontuais e em silos. O "dinheiro ficará na mesa" por falta de cross-selling estratégico.
+                        Continuar no modelo comercial/transacional. Manter a inteligência em silos e tomar decisões baseadas no passado.
                     </p>
                     <p class="mt-3">
-                        Corremos o risco de perder um cliente do <strong>Top 300</strong> para um concorrente que ofereceu uma solução integrada que *nós* poderíamos ter oferecido.
+                        Risco de perder relevância estratégica para os G1/G2, que buscam parceiros de *inteligência* e não apenas *fornecedores*.
                     </p>
                 </div>
                 
                 <div class="bg-green-100 p-6 rounded-lg text-green-900 border border-green-200">
-                    <h3 class="text-2xl font-bold mb-3">O Valor da Inteligência Integrada</h3>
+                    <h3 class="text-2xl font-bold mb-3">O Valor da ACEIP</h3>
                     <p>
-                        Decisões mais rápidas e inteligentes. Sinergia real entre as entidades. Maximização do ROI dos nossos dados através de <strong>Estratégias Colaborativas</strong>.
+                        Elevar o relacionamento para um modelo de *inteligência estratégica*. Tomar decisões baseadas em cenários futuros.
                     </p>
                     <p class="mt-3">
-                        Nos tornamos um parceiro estratégico indispensável, <strong class="font-semibold">blindando nossa receita</strong> e expandindo nosso valor para os 300 clientes mais importantes de Goiás.
+                        Tornar o Sistema FIEG a principal fonte de inteligência prospectiva, blindando e expandindo o valor na nossa base de clientes-chave.
                     </p>
                 </div>
             </div>
 
-            <div class="text-center mt-12 text-gray-800">
-                <p class="text-2xl font-semibold opacity-90">Vamos construir essa ponte.</p>
-                <p class="text-lg opacity-70 mt-2">Obrigado.</p>
+            <div class="text-center mt-12 text-gray-800 bg-white p-6 rounded-lg shadow border border-gray-200">
+                <p class="text-2xl font-semibold opacity-90">"Cada interação é um dado. Cada dado é um insight.<br>Cada insight vira ação e reputação."</p>
             </div>
 
             <footer class="slide-footer border-gray-300">
-                <div>Proposta de Criação ACEIC</div>
-                <div>Slide 13 de 13</div>
+                <div>Proposta de Criação ACEIP (Ponto 8)</div>
+                <div>Slide 10 de 10</div>
             </footer>
         </div>
     </div>
 
     <script>
-        // Função para abas do Exemplo 1 (Slide 9)
-        function openTab(evt, tabName) {
+        // Função para abas do Slide 4 (Eixos)
+        function openEixoTab(evt, tabName) {
             var i, tabcontent, tablinks;
             var slide = evt.currentTarget.closest('.slide-content');
             tabcontent = slide.querySelectorAll(".tab-content");
@@ -823,141 +565,27 @@
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("active");
             }
-            document.getElementById(tabName).style.display = "block";
-            document.getElementById(tabName).classList.add("active");
+            var activeTab = slide.querySelector("#" + tabName);
+            activeTab.style.display = "block";
+            activeTab.classList.add("active");
             evt.currentTarget.classList.add("active");
         }
 
-        // Função para abas do Exemplo 2 (Slide 10)
-        function openTab2(evt, tabName) {
-            var i, tabcontent, tablinks;
-            var slide = evt.currentTarget.closest('.slide-content');
-            tabcontent = slide.querySelectorAll(".tab-content-p2");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-                tabcontent[i].classList.remove("active");
-            }
-            tablinks = slide.querySelectorAll(".tab-btn-p2");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
-            }
-            document.getElementById(tabName).style.display = "block";
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
-
-        // --- Funções do Slide 6 (Setores Portadores) ---
-        var currentActiveSector = null;
-        function showInsight(clickedBtn, sector, sindicato, insight) {
-            var slide = clickedBtn.closest('.slide-content');
-            var display = slide.querySelector("#insight-display");
-            var sindicatoEl = slide.querySelector("#insight-sindicato");
-            var textEl = slide.querySelector("#insight-text");
-            
-            if (currentActiveSector && currentActiveSector !== clickedBtn) {
-                currentActiveSector.classList.remove("active");
-            }
-
-            if (display.classList.contains("hidden") === false && currentActiveSector === clickedBtn) {
-                display.classList.add("hidden");
-                clickedBtn.classList.remove("active");
-                currentActiveSector = null;
-            } else {
-                sindicatoEl.textContent = "Parceiro Estratégico: " + sindicato;
-                textEl.innerHTML = "Insight ACEIC: " + insight; 
-                display.classList.remove("hidden");
-                
-                clickedBtn.classList.add("active");
-                currentActiveSector = clickedBtn;
-            }
-        }
-
-
-        // --- Funções do Simulador (Slide 11) ---
-        // 1. Troca o setor (caminho)
-        function changeSector2() {
-            var slide = document.getElementById('slide11');
-            var select = slide.querySelector("#sector-select-2");
-            var selectedValue = select.value;
-            
-            var paths = slide.querySelectorAll(".sim-path");
-            for (var i = 0; i < paths.length; i++) {
-                paths[i].style.display = "none";
-                paths[i].classList.remove("active");
-            }
-
-            var activePath = slide.querySelector("#path-" + selectedValue);
-            activePath.style.display = "block";
-            activePath.classList.add("active");
-
-            runSimulator2(selectedValue, 1);
-        }
-
-        // 2. Avança os passos dentro de um setor
-        function runSimulator2(sector, step) {
-            var slide = document.getElementById('slide11');
-            var steps = slide.querySelectorAll("#path-" + sector + " .sim-step");
-            for (var i = 0; i < steps.length; i++) {
-                steps[i].style.display = "none";
-                steps[i].classList.remove("active");
-            }
-            
-            var nextStep = slide.querySelector("#sim-step-" + sector + "-" + step);
-            if (nextStep) {
-                nextStep.style.display = "block";
-                nextStep.classList.add("active");
-            }
-        }
 
         // --- Inicialização no Carregamento ---
         document.addEventListener("DOMContentLoaded", function() {
-            // Inicializa abas do Exemplo 1 (Slide 9)
-            var slide9 = document.getElementById("slide9");
-            if (slide9) {
-                var tab1 = slide9.querySelector("#tab1");
+            // Inicializa abas do Slide 4 (Eixos)
+            var slide4 = document.getElementById("slide4");
+            if (slide4) {
+                var tab1 = slide4.querySelector("#eixo1");
                 if (tab1) tab1.style.display = "block";
-                var tab1Button = slide9.querySelector(".tab-btn");
+                var tab1Button = slide4.querySelector(".tab-btn");
                 if (tab1Button) tab1Button.classList.add("active");
                 
-                var slide9Tabs = slide9.querySelectorAll(".tab-content");
-                slide9Tabs.forEach((tab, index) => {
+                var slide4Tabs = slide4.querySelectorAll(".tab-content");
+                slide4Tabs.forEach((tab, index) => {
                     if(index > 0) tab.style.display = "none";
                 });
-            }
-            
-            // Inicializa abas do Exemplo 2 (Slide 10)
-            var slide10 = document.getElementById("slide10");
-            if(slide10) {
-                var p2tab1 = slide10.querySelector("#p2-tab1");
-                if (p2tab1) p2tab1.style.display = "block";
-                var p2Button = slide10.querySelector(".tab-btn-p2");
-                if (p2Button) p2Button.classList.add("active");
-                
-                var slide10Tabs = slide10.querySelectorAll(".tab-content-p2");
-                slide10Tabs.forEach((tab, index) => {
-                    if(index > 0) tab.style.display = "none";
-                });
-            }
-            
-            // Inicializa Slide 6 (Setores) - com uma mensagem padrão
-            var slide6 = document.querySelector(".slide-content:nth-child(6)"); // Pega o 6º slide
-            if (slide6) {
-                var display = slide6.querySelector("#insight-display");
-                if (display) {
-                    var sindicatoEl = slide6.querySelector("#insight-sindicato");
-                    var textEl = slide6.querySelector("#insight-text");
-                    if (sindicatoEl && textEl) {
-                        sindicatoEl.textContent = "O CAMPO DE JOGO ESTRATÉGICO";
-                        textEl.textContent = "Clique em um setor acima para ver o insight e o Sindicato parceiro-chave.";
-                        display.classList.remove("hidden");
-                    }
-                }
-            }
-
-
-            // Inicializa o Simulador (Slide 11)
-            if(document.getElementById("slide11")) {
-                changeSector2(); 
             }
         });
     </script>
